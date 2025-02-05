@@ -1,11 +1,11 @@
 {
-  "name": "vanilla-app-template",
+  "name": "developer-portfolio-project",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/vanilla-app-template/",
+    "build": "vite build --base=/developer-portfolio-project/",
     "preview": "vite preview"
   },
   "devDependencies": {
@@ -14,9 +14,12 @@
     "postcss-sort-media-queries": "^5.2.0",
     "vite": "^5.4.6"
   },
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "vovichcoolguy@gmail.com, dimzuk04@gmail.com, neonmed571@gmail.com, poltavarud@gmail.com, imartunyuk88@gmail.com, mksenia728@gmail.com, galinka091189@gmail.com, sapsan281993@gmail.com, nikitamaxkononov@gmail.com, ckraer@gmail.com, MihailShev",
   "license": "ISC",
   "dependencies": {
+    "accordion-js": "^3.4.0",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
   }
