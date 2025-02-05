@@ -1,0 +1,138 @@
+
+.projects-section
+{
+    background-color: var(--background-color);
+    padding: 32px 0px;
+}
+
+.projects-section-header
+{
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--shadow-text-color);
+    margin-bottom: 32px;
+}
+
+.projects-arrow-icon
+{
+    fill: var(--text-color);
+    width: 24px;
+    height: 24px;
+}
+
+.project-description-wrapper
+{
+    background-color: var(--text-color);
+    border-radius: 24px 24px 0px 0px;
+    padding: 32px;
+}
+
+.project-image-wrapper
+{
+    padding: 100px 16px;
+    background-color: #242527;
+    border-radius: 0px 0px 24px 24px;
+}
+
+.project-image
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-technologies
+{
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 96px;
+}
+.project-technology
+{
+    background-color: var(--text-color);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: var(--background-color);
+    border-radius: 60px;
+    padding: 13px 18px;
+    border: 1px solid rgba(28, 29, 32, 0.2);
+}
+
+.project-header
+{
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: -0.03em;
+    color: var(--background-color);
+    margin-bottom: 32px;
+    max-width: 279px;
+    text-transform: capitalize;
+}
+
+.project-link
+{
+    display: block;
+    color: var(--text-color);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    background-color: var(--red-color);
+    padding: 13px 32px;
+    border-radius: 60px;
+    width: 141px;
+}
+
+@media screen and (min-width: 768px)
+{
+    .projects-section
+    {
+        padding: 48px 0px;
+    }
+
+    .project-description-wrapper
+    {
+        padding: 64px;
+    }
+    
+    .project-technologies
+    {
+        margin-bottom: 164px;
+    }
+
+    .project-header
+    {
+        line-height: 1;
+        font-size: 44px;
+        max-width: 494px;
+    }
+
+    .project-link
+    {
+        width: 177px;
+        padding: 18px 50px;
+    }
+
+    .project-image-wrapper
+    {
+        padding: 120px 45px;
+    }
+}
+
+@media screen and (min-width: 1440px)
+{
+    .project-technologies
+    {
+        margin-bottom: 223px;
+    }
+}
