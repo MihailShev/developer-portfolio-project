@@ -1,0 +1,85 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.header {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: transparent; 
+    z-index: 10;
+    padding: 32px 16px; /* Виправлено */
+}
+
+.logo-header {
+    display: flex;
+    gap: 8px;
+}
+
+/* Бургер-меню та навігація за замовчуванням приховані */
+.nav-menu {
+    display: none;
+}
+
+.order-button {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .header-container {
+        align-items: center;
+    }
+
+  
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background: transparent;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        display: flex; 
+        position: fixed;
+        top: 50px;
+        left: 10px;
+        padding: 10px;
+    }
+
+
+    .hidden {
+        display: none;
+    }
+
+
+    .order-button {
+        display: flex;
+        border-radius: 60px;
+        padding: 18px 24px;
+        width: 163px;
+        height: 55px;
+        background: var(--red-color);
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        color: var(--text-color);
+    }
+}
+
+
