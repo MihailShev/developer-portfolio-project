@@ -13,7 +13,7 @@ body {
 }
 
 .hero {
-    background-image: url('../img/hero/red-bg@2x.jpg');
+    background-image: url('../img/hero/red-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -91,6 +91,10 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+    .hero{
+        background-image: url('../img/hero/red-bg@2x.jpg');
+    }
+
     .contact {
         width: 473px;
         height: 55px;
