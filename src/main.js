@@ -1,27 +1,37 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('nav');
-const menuLinks = document.querySelectorAll('nav ul li a');
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.header-nav-menu');
+  const closeMenu = document.querySelector('.menu-close');
+  const menuLinks = document.querySelectorAll('.header-nav-menu ul li a');
 
-// Відкривати/закривати меню при кліку на кнопку
-menuToggle.addEventListener('click', () => {
-  navMenu.classList.toggle('hidden');
-});
+  // Відкривати/закривати меню при кліку на бургер
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+  });
 
-// Плавне прокручування та закриття меню після кліку на посилання
-menuLinks.forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const targetId = this.getAttribute('href').substring(1);
-    const targetElement = document.getElementById(targetId);
+  // Закривати меню при кліку на "X"
+  closeMenu.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    menuToggle.classList.remove('active');
+  });
 
-    if (targetElement) {
-      window.scrollTo({
-        top: targetElement.offsetTop,
-        behavior: 'smooth',
-      });
-    }
+  // Закривати меню після кліку на посилання
+  menuLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
 
-    // Закриваємо меню після кліку на пункт навігації
-    navMenu.classList.add('hidden');
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80, // Враховуємо висоту header
+          behavior: 'smooth',
+        });
+      }
+
+      navMenu.classList.remove('active');
+      menuToggle.classList.remove('active');
+    });
   });
 });

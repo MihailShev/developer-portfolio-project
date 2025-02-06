@@ -1,85 +1,170 @@
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
-}
 
 .header {
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 80px;
-    background: transparent; 
-    z-index: 10;
-    padding: 32px 16px; /* Виправлено */
+    background: transparent;
+    z-index: 100;
+    padding: 32px 16px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .logo-header {
     display: flex;
     gap: 8px;
 }
+.header-span {
+    font-weight: 500;
+font-size: 20px;
+letter-spacing: -0.02em;
+color: var(--text-color)
+}
+/* Стилізація бургер-меню */
+.menu-toggle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 110;
+}
 
-/* Бургер-меню та навігація за замовчуванням приховані */
-.nav-menu {
+.burger-line {
+    width: 32px;
+    height: 4px;
+    background: var(--text-color);
+    border-radius: 4px;
+    position: absolute;
+    transition: transform 250ms ease-in;
+}
+
+.burger-line:first-child {
+    top: 12px;
+}
+
+.burger-line:last-child {
+    bottom: 12px;
+}
+
+/* Анімація при відкритті меню */
+.menu-toggle.active .burger-line:first-child {
+    transform: rotate(45deg);
+    top: 18px;
+}
+
+.menu-toggle.active .burger-line:last-child {
+    transform: rotate(-45deg);
+    bottom: 18px;
+}
+
+/* Основна навігація (прихована на мобільних) */
+.header-nav-menu {
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/hero/red-bg@2x.jpg);
+    background-repeat: no-repeat;
+background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+   
+}
+
+.header-nav-menu.active {
+    transform: translateY(0);
+}
+.menu-close {
     display: none;
 }
+
+/* Стилі списку навігації */
+.header-nav-menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+   font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: var(--text-color);
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    transition: color 250ms ease-in;
+    
+}
+
+.header-nav-menu ul li a:hover {
+    color: var(--red-color);
+}
+
 
 .order-button {
-    display: none;
+    
 }
 
-.menu-toggle {
-    display: none;
-}
 
+
+/* Десктопний режим */
 @media only screen and (min-width: 768px) {
-    .header-container {
-        align-items: center;
-    }
-
-  
     .menu-toggle {
-        display: block;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        background: transparent;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        cursor: pointer;
-    }
-
-    .nav-menu {
-        display: flex; 
-        position: fixed;
-        top: 50px;
-        left: 10px;
-        padding: 10px;
-    }
-
-
-    .hidden {
         display: none;
     }
-
-
-    .order-button {
-        display: flex;
-        border-radius: 60px;
-        padding: 18px 24px;
-        width: 163px;
-        height: 55px;
-        background: var(--red-color);
-        align-items: center;
-        justify-content: center;
-        font-weight: 500;
-        font-size: 16px;
-        letter-spacing: -0.02em;
-        color: var(--text-color);
-    }
+/* Кнопка закриття меню */
+.menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
 }
+    .header-nav-menu {
+        position: static;
+        transform: translateY(0);
+        background: transparent;
+        height: auto;
+        display: flex;
+    }
 
+    .header-nav-menu ul {
+        display: flex;
+        gap: 20px;
+    }
 
+    .header-nav-menu ul li a {
+        color: black;
+        font-size: 18px;
+    }
+
+    /* .order-button {
+        display: flex;
+        background: red;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+    } */
+}
