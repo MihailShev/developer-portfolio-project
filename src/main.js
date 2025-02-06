@@ -1,1 +1,1 @@
-import "./hero.js"
+import "../src/js/hero.js"
