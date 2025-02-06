@@ -1,0 +1,78 @@
+.modal-description {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.is-closed {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-overlay {
+  padding: 32px 16px;
+  background-image: url(/img/modal/modal-glass-effect.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.modal-container {
+  height: 100vh;
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.modal-menu {
+  text-align: center;
+  padding-top: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.modal-menu-btn {
+  text-decoration: underline;
+  margin-bottom: 12px;
+  transition: color 250ms ease-in;
+}
+.modal-menu-btn:hover,
+.modal-menu-btn:focus {
+  color: #ed3b44;
+}
+
+.modal-exit-btn {
+  padding: 5px;
+  fill: #fafafa;
+}
+.modal-order-btn {
+  margin: 289px 103px 0 103px;
+  width: 164px;
+  height: 45px;
+  background-color: #ed3b44;
+  color: #fafafa;
+  border-radius: 60px;
+  transition: background-color 250ms ease-in;
+}
+.modal-order-btn:hover,
+.modal-order-btn:focus {
+  background-color: #c92830;
+}
+@media only screen and (min-width: 768px) {
+  .modal-container {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+@media only screen and (min-resolution: 192dpi) {
+  .modal-overlay {
+    background-image: url(/img/modal/modal-glass-effect2x.jpg);
+  }
+}
