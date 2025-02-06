@@ -1,13 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const hero = document.querySelector(".hero");
     const titles = document.querySelectorAll(".title");
     const nav = document.querySelector(".contact");
     const contacts = document.querySelectorAll(".contact a, .email");
     let lastScrollY = window.scrollY;
 
+    hero.style.opacity = "1";
+
     titles.forEach(title => {
-        title.style.opacity = "0";
         title.innerText = "";
     });
+
     contacts.forEach(contact => {
         contact.style.opacity = "0";
         contact.style.transform = "translateY(20px)";
@@ -15,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function typeText(element, text, callback) {
         let i = 0;
-        element.style.opacity = "1";
 
         let interval = setInterval(() => {
             if (i < text.length) {
@@ -64,5 +66,3 @@ document.addEventListener("DOMContentLoaded", function () {
         lastScrollY = window.scrollY;
     });
 });
-
-
