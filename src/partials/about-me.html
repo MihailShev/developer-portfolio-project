@@ -1,1 +1,156 @@
-<section id="about"></section>
+<section id="section-about" class="section-about">
+  <div class="container">
+    <div class="about-me-cont">
+      <div class="coutn-title">
+        <h2 class="visually-hidden">About me</h2>
+        <p class="about-me-text">
+          I work with people all over the world to create impressive and
+          <span class="accent-color-red">functional</span>
+          <span class="shadow-text">websites</span> that reflect each client's
+          unique personality.
+        </p>
+      </div>
+
+      <picture
+        ><source
+          srcset="
+            ../img/about-me/deck/lloyd-jefferson-desk.webp    1x,
+            ../img/about-me/deck/lloyd-jefferson-desk@2x.webp 2x
+          "
+          media="(min-width: 1440px)"
+        />
+        <source
+          srcset="
+            ../img/about-me/tab/lloyd-jefferson-tab.webp    1x,
+            ../img/about-me/tab/lloyd-jefferson-tab@2x.webp 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ../img/about-me/mob/lloyd-jefferson-mob.webp    1x,
+            ../img/about-me/mob/lloyd-jefferson-mob@2x.webp 2x
+          "
+          media="(max-width: 767px)"
+        />
+        <img
+          class="about-img"
+          src="../img/about-me/deck/lloyd-jefferson-desk@2x.webp"
+          alt="man with laptop"
+        />
+      </picture>
+    </div>
+
+    <div class="about-me-info">
+      <ul class="accordeon-list">
+        <li class="ac">
+          <div class="accordeon-title ac-header is-active">
+            <h3 class="title-text shadow-text">About me</h3>
+            <button type="button" class="btn-title ac-trigger">
+              <svg class="title-icon" width="20" height="20">
+                <use href="../img/icons/icons.svg#icon-arrow-up"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="accordeon-content ac-panel">
+            <p class="accordeon-content-text">
+              I am Lloyd Jefferson, a talented programmer with extensive
+              expertise in software development. I have an understanding of
+              different programming languages and technologies, always ready to
+              improve my skills. I always follow the latest trends and look for
+              unconventional, creative solutions to problems. I have a high
+              level of analytical skills and am able to effectively solve even
+              the most difficult tasks encountered on the way.
+            </p>
+            <p class="accordeon-content-text">
+              Able to work both independently and in a team. I can effectively
+              cooperate with colleagues, exchanging ideas and finding optimal
+              solutions. Professional maturity allows you to calmly cope with
+              challenges and stressful situations, while maintaining a high
+              quality of work. <br />
+              I am always looking for opportunities for self-improvement. I
+              actively study new technologies and practices to stay abreast of
+              the latest innovations. I have a strong understanding of various
+              programming languages, frameworks and architectural concepts that
+              allow me to create efficient and scalable software.
+            </p>
+          </div>
+        </li>
+
+        <li class="ac">
+          <div class="accordeon-title ac-header">
+            <h3 class="title-text accent-color-gray shadow-text">Role</h3>
+            <button type="button" class="btn-title ac-trigger">
+              <svg class="title-icon" width="20" height="20">
+                <use href="../img/icons/icons.svg#icon-arrow-up"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="accordeon-content ac-panel hidden">
+            <p class="accordeon-content-text">Frontend development</p>
+            <p class="accordeon-content-text">HeadlessCMS,Wordpress</p>
+            <p class="accordeon-content-text">Blender(enjoy)</p>
+          </div>
+        </li>
+
+        <li class="ac">
+          <div class="accordeon-title ac-header shadow-text">
+            <h3 class="title-text accent-color-gray">Education</h3>
+            <button type="button" class="btn-title ac-trigger">
+              <svg class="title-icon" width="20" height="20">
+                <use href="../img/icons/icons.svg#icon-arrow-up"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="accordeon-content ac-panel hidden">
+            <p class="accordeon-content-text">
+              2018 - 2019 / Frontend Development Diploma, GoIT IT School, New
+              York
+            </p>
+            <p class="accordeon-content-text">
+              2019 - 2020 / Advanced Web Development Certificate, GoIT IT
+              School, New York
+            </p>
+            <p class="accordeon-content-text">
+              2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="about-me-swiper-container">
+      <div class="about-me-skills swiper my-thumbs">
+        <ul class="swiper-list swiper-wrapper">
+          <li class="swiper-slide swiper-content-wrap">
+            <p class="swipe-text">HTML</p>
+          </li>
+          <li class="swiper-slide swiper-content-wrap">
+            <p class="swipe-text">CSS</p>
+          </li>
+          <li class="swiper-slide swiper-content-wrap">
+            <p class="swipe-text">JavaScript</p>
+          </li>
+          <li class="swiper-slide swiper-content-wrap">
+            <p class="swipe-text">React</p>
+          </li>
+          <li class="swiper-slide swiper-content-wrap">
+            <p class="swipe-text">Node.js</p>
+          </li>
+          <li class="swiper-slide swiper-content-wrap">
+            <p class="swipe-text">React Native</p>
+          </li>
+          <li class="swiper-slide swiper-content-wrap">
+            <p class="swipe-text">Soft skills</p>
+          </li>
+        </ul>
+      </div>
+      <button class="swiper-arrow swiper-next" type="button">
+        <svg class="swiper-arrow-svg" width="28" height="28">
+          <use href="../img/icons/icons.svg#icon-arrow-next"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+<script type="module" src="../js/about-me-acord.js"></script>

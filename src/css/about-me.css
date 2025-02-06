@@ -1,0 +1,192 @@
+.about-me-cont {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  margin-top: 64px;
+}
+
+.coutn-title {
+  padding: 32px;
+  padding-bottom: 272px;
+  background: #242527;
+  border-radius: 24px;
+}
+
+.about-me-text {
+  color: var(--text-color);
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.accent-color-red {
+  color: var(--red-color);
+}
+
+/* acordeon */
+.about-me-info {
+  margin-top: 32px;
+}
+
+.accordeon-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.ac {
+  border-bottom: 1px solid var(--shadow-text-color);
+}
+
+.accordeon-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-text {
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.active-is {
+  transform: rotate(180deg);
+  transition: transform 250ms linear;
+}
+
+.hidden {
+  overflow: hidden;
+  opacity: 0;
+}
+
+.btn-title {
+  fill: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--shadow-text-color);
+}
+
+.accordeon-content {
+  padding-top: 12px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.accordeon-content-text {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+/* ==================SWIPER=================== */
+
+.about-me-swiper-container {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.about-me-skills {
+  width: 260px;
+  height: 130px;
+  margin: 0;
+}
+
+.swiper-content-wrap {
+  display: flex;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+  border: 1px solid var(--shadow-text-color);
+  border-radius: 50%;
+  transition: background-color 250ms linear;
+  align-items: center;
+}
+
+.swiper-content-wrap-active,
+.swiper-content-wrap:active {
+  background-color: var(--red-color) !important;
+  outline: transparent;
+  border: none;
+}
+
+.swiper-arrow-svg {
+  fill: var(--shadow-text-color);
+}
+
+.swipe-text {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .coutn-title {
+    padding: 64px;
+    padding-bottom: 436px;
+  }
+
+  .about-me-text {
+    font-size: 38px;
+    line-height: 1.05263;
+  }
+
+  .about-me-info {
+    margin-top: 64px;
+  }
+
+  .accordeon-content {
+    row-gap: 16px;
+  }
+
+  .accordeon-list {
+    row-gap: 32px;
+  }
+
+  .about-me-skills {
+    width: 600px;
+    height: 200px;
+  }
+
+  .swiper-arrow-svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-me-cont {
+    flex-direction: row;
+    column-gap: 16px;
+  }
+
+  .coutn-title {
+    max-width: 50%;
+  }
+
+  .about-me-swiper-container {
+    margin-top: 64px;
+  }
+
+  .about-me-skills {
+    width: 1200px;
+    height: 200px;
+  }
+}
