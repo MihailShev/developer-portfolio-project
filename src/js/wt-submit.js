@@ -29,7 +29,7 @@ const createPostQuery = async e => {
   } catch (error) {
     iziToast.show({
       ...iziToastCommonOptions,
-      message: `Sorry, you have error ${searchedThema}. Please try again!`,
+      message: `Sorry, you have error ${error}. Please try again!`,
     });
   }
 };

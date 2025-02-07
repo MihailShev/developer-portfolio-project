@@ -1,5 +1,5 @@
 import iziToast from 'izitoast';
-import { iziToastCommonOptions} from '/iziToastCommonOptions';
+import { iziToastCommonOptions} from './iziToastCommonOptions';
 const formData = { email: '', comment: '' };
 const keyFormDataLS = 'feedback-form-state';
 
