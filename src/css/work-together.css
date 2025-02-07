@@ -5,7 +5,7 @@ footer {
 .container-work-together {
   padding-top: 32px;
   padding-bottom: 32px;
-  background-image: url(../img/work-together/mob/glass-effect-mob.jpg);
+  background-image: url(/img/work-together/mob/glass-effect-mob.png);
   background-repeat: no-repeat;
   background-size: 25% 100%;
   background-position: right bottom;
@@ -48,6 +48,7 @@ footer {
 
 .work-t-form__wrapper-input {
   width: 343px;
+  position: relative;
 }
 
 .work-t-form__input {
@@ -61,16 +62,39 @@ footer {
   font-weight: 500;
   line-height: 150%;
   letter-spacing: -0.02em;
-  
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transform: border 250ms ease-in;
+  transition: border 250ms ease-in;
 }
 
 .work-t-form__input:hover,
 .work-t-form__input:focus {
   border-color: #dedede;
+}
+
+.work-t-form__input::placeholder {
+  color: transparent;
+}
+
+.work-t-form__label {
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 500ms ease-out, font-size 500ms ease-out,
+    color 500ms ease-out;
+}
+
+.work-t-form__input:active + .work-t-form__label,
+.work-t-form__input:focus + .work-t-form__label,
+.work-t-form__input:not(:placeholder-shown) + .work-t-form__label {
+  transform: translate(0, -10px);
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(250, 250, 250, 0.2);
 }
 
 .work-t-form__input:not(:placeholder-shown):valid {
@@ -99,11 +123,12 @@ footer {
   color: #e74a3b;
 }
 
-.work-t-form__input:not(:placeholder-shown):valid ~ .work-t-form__input-valid  {
+.work-t-form__input:not(:placeholder-shown):valid ~ .work-t-form__input-valid {
   display: block;
 }
 
-.work-t-form__input:not(:placeholder-shown):invalid ~ .work-t-form__input-invalid {
+.work-t-form__input:not(:placeholder-shown):invalid
+  ~ .work-t-form__input-invalid {
   display: block;
 }
 
@@ -115,15 +140,9 @@ footer {
   margin-bottom: 32px;
 }
 
-.work-t-form__input::placeholder {
-}
-
-.work-t-form__label {
+/* .work-t-form__label {
   color: transparent;
-}
-
-.button {
-}
+} */
 
 .work-t-form__button {
   border-radius: 100%;
@@ -133,7 +152,7 @@ footer {
   font-weight: 500;
   letter-spacing: -0.02em;
   color: var(--text-color);
-  transform: background-color 250ms ease-in;
+  transition: background-color 250ms ease-in;
 }
 
 .work-t-form__button:hover,
@@ -150,9 +169,6 @@ footer {
   gap: 4px;
 }
 
-.work-t-address-list__item {
-}
-
 .work-t-address-list__link {
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
@@ -161,6 +177,18 @@ footer {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
+  transition: border 250ms ease-in;
+}
+
+.work-t-address-list__link:hover,
+.work-t-address-list__link:focus {
+  border-color: var(--text-color);
+}
+
+@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .container-work-together {
+    background-image: url(/img/work-together/mob/glass-effect-mob2@2x.png);
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -171,7 +199,7 @@ footer {
   .container-work-together {
     padding-top: 80px;
     padding-bottom: 169px;
-    background-image: url(../img/work-together/tab/glass-effect-tab.jpg);
+    background-image: url(/img/work-together/tab/glass-effect-tab.png);
   }
 
   .work-t-title {
@@ -201,11 +229,11 @@ footer {
   .work-t-form__wrapper-input {
     width: 245px;
   }
-  
+
   .work-t-form__wrapper-input:not(:last-of-type) {
     margin-bottom: 0;
   }
-  
+
   .work-t-form__wrapper-input:last-of-type {
     margin-bottom: 0;
   }
@@ -215,7 +243,7 @@ footer {
     height: 150px;
     margin-bottom: 0;
   }
-  
+
   .work-t-address-list {
     gap: 8px;
   }
@@ -227,30 +255,42 @@ footer {
   }
 }
 
-  @media only screen and (min-width: 1440px) {
-    footer {
-      padding-top: 82px;
-    }
-    
-    .container-work-together {
-      padding-left: 196px;
-      background-image: url(../img/work-together/desk/glass-effect-desk.jpg);
-      background-size: 28% 100%;
-    }
-    
-    .work-t-form {
-      gap: 0;
-    }
-    
-    .work-t-form__wrapper-input {
-      width: 390px;
-    }
-    
-    .work-t-form__wrapper-input:not(:last-of-type) {
-      margin-right: 32px;
-    }
-    
-    .work-t-form__wrapper-input:last-of-type {
-      margin-right: 86px;
-    }
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .container-work-together {
+    background-image: url(/img/work-together/tab/glass-effect-tab2@2x.png);
   }
+}
+
+@media only screen and (min-width: 1440px) {
+  footer {
+    padding-top: 82px;
+  }
+
+  .container-work-together {
+    padding-left: 196px;
+    background-image: url(/img/work-together/desk/glass-effect-desk.png);
+    background-size: 28% 100%;
+  }
+
+  .work-t-form {
+    gap: 0;
+  }
+
+  .work-t-form__wrapper-input {
+    width: 390px;
+  }
+
+  .work-t-form__wrapper-input:not(:last-of-type) {
+    margin-right: 32px;
+  }
+
+  .work-t-form__wrapper-input:last-of-type {
+    margin-right: 86px;
+  }
+}
+
+@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+  .container-work-together {
+    background-image: url(../img/work-together/desk/glass-effect-desk@2x.png);
+  }
+}
