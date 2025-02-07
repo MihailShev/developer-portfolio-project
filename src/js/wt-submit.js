@@ -5,6 +5,7 @@ import {
 } from './local-storage';
 import { postQueryComment } from './portfolio-api';
 import { onModalMessage } from './wt-modal';
+import { iziToastCommonOptions} from './iziToastCommonOptions';
 import iziToast from 'izitoast';
 
 const formWorkTogether = document.querySelector('.work-t-form');

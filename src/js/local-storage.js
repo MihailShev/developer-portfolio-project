@@ -1,4 +1,5 @@
 import iziToast from 'izitoast';
+import { iziToastCommonOptions} from '/iziToastCommonOptions';
 const formData = { email: '', comment: '' };
 const keyFormDataLS = 'feedback-form-state';
 
@@ -20,7 +21,7 @@ export const fillFormFromLS = formEl => {
   } catch (err) {
     iziToast.show({
       ...iziToastCommonOptions,
-      message: `Sorry, you have error ${searchedThema}. Please try again!`,
+      message: `Sorry, you have error ${err}. Please try again!`,
     });
   }
 };
