@@ -2,13 +2,11 @@ import LocalStorageForm from './local-storage';
 import { postQueryComment } from './portfolio-api';
 import { onModalMessage } from './wt-modal';
 import iziToast from 'izitoast';
-import { iziToastCommonOptions } from '/js/iziToastCommonOptions';
+import { iziToastCommonOptions } from './iziToastCommonOptions';
 
 const formWorkTogether = document.querySelector('.work-t-form');
 
 let localStorageForm = new LocalStorageForm('form-work-together', formWorkTogether);
-console.dir(localStorage);
-
 const createPostQuery = async e => {
   e.preventDefault();
 
@@ -21,7 +19,7 @@ const createPostQuery = async e => {
 
   try {
     await postQueryComment(emailValue, commentValue);
-    localStorageForm.clearDataFormLS(e);
+    localStorageForm.clearDataFormLS(e, formWorkTogether);
     const commentEl = formWorkTogether.querySelector('[id="comment"]');
     commentEl.classList.remove('js-success');
     onModalMessage();

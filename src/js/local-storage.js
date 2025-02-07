@@ -1,5 +1,15 @@
 import iziToast from 'izitoast';
-import { iziToastCommonOptions } from '/js/iziToastCommonOptions';
+import { iziToastCommonOptions } from './iziToastCommonOptions';
+
+// Класс-библиотека LocalStorageForm для сохранения значений элементов формы в Local Storage, а также считывания из хранилища и заполнения формы.
+// Для использования необходимо: 
+//  - импортировать класс import LocalStorageForm from '.ваш-путь/local-storage'
+//  - создать объект типа LocalStorageForm, предоставив два параметра: имя ключа для доступа к полям формы, и ссылку на элемент формы:
+//    let localStorageForm = new LocalStorageForm('имя-ключа', ссылка-на-элемент-формы);
+//  - доступные методы:
+//    fillFormFromLS(ссылка-на-форму) - заполняет форму данными из хранилища, передать ссылку на форму;
+//    saveDataFormToLS(event) - сохраняет данные в хранилище;
+//    clearDataFormLS(event, cсылка-на форму) - очищает хранилище и форму;
 
 class LocalStorageForm {
   
@@ -42,7 +52,7 @@ class LocalStorageForm {
     }
   };
   
-  saveDataFormToLS = event => {
+  saveDataFormToLS = (event) => {
     const formField = event.target; 
     this.formData[formField.name] = formField.value;
     localStorage.setItem(this.keyFormDataLS, JSON.stringify(this.formData));
