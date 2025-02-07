@@ -1,1 +1,43 @@
-<footer></footer>
+<footer id="work-together">
+  <div class="container container-work-together">
+
+    <h2 class="work-t-title">
+      <a class="work-t-title__link" href="index.html" aria-label="Site logo">
+        <img src="../img/logo/logotype.svg" alt="Site logo">
+      </a>
+      <span>Let`s&nbsp;</span><span class="work-t-title__accent">work</span><span>together</span>
+    </h2>
+
+    <form class="work-t-form">
+      <div class="work-t-form__wrapper-input">
+        <input class="work-t-form__input" type="email" id="email" name="email" placeholder="clients@gmail.com"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required>
+        <label class="work-t-form__label" for="email">clients@gmail.com</label>
+        <p class="work-t-form__input-valid">Success!</p>
+        <p class="work-t-form__input-invalid">Invalid email, try again</p>
+      </div>
+
+      <div class="work-t-form__wrapper-input">
+        <input class="work-t-form__input" type="text" id="comment" name="comment" placeholder="comments" readonly
+          required>
+        <label class="work-t-form__label" for="text">comments</label>
+        <p class="work-t-form__input-valid">Succes!</p>
+        <p class="work-t-form__input-invalid">Invalid email, try again</p>
+      </div>
+
+      <button class="button work-t-form__button" type="submit">Send</button>
+    </form>
+
+    <address class="work-t-address">
+      <ul class="work-t-address-list">
+        <li class="work-t-address-list__item">
+          <a class="work-t-address-list__link" href="mailto:lloydjefferson@gmail.com">lloydjefferson@gmail.com</a>
+        </li>
+        <li class="work-t-address-list__item">
+          <a class="work-t-address-list__link" href="tel:+3801111111111">+380 11 1111 11 11</a>
+        </li>
+      </ul>
+    </address>
+
+  </div>
+</footer>
