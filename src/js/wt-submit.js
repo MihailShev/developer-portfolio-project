@@ -7,7 +7,7 @@ import { iziToastCommonOptions } from '/js/iziToastCommonOptions';
 const formWorkTogether = document.querySelector('.work-t-form');
 
 let localStorageForm = new LocalStorageForm('form-work-together', formWorkTogether);
-console.log(localStorage);
+console.dir(localStorage);
 
 const createPostQuery = async e => {
   e.preventDefault();
@@ -28,12 +28,12 @@ const createPostQuery = async e => {
   } catch (error) {
     iziToast.show({
       ...iziToastCommonOptions,
-      message: `Sorry, you have error ${searchedThema}. Please try again!`,
+      message: `Sorry, you have error ${error}. Please try again!`,
     });
   }
 };
 
-localStorageForm.fillFormFromLS();
+localStorageForm.fillFormFromLS(formWorkTogether);
 
 if (formWorkTogether.elements[1].value.trim() !== '') {
   formWorkTogether.elements[1].classList.add('js-success');

@@ -2,36 +2,36 @@ import iziToast from 'izitoast';
 import { iziToastCommonOptions } from '/js/iziToastCommonOptions';
 
 class LocalStorageForm {
-  keyFormDataLS;
-  formData;
-  formElement;
   
   constructor(keyFormDataLS, formElement) {
     this.keyFormDataLS = keyFormDataLS;
-    this.formElement = formElement;
-    const kength = formElement.elements.length;
-    for (const i = 0; i < length; i++) {
-      formData[key.name] = undefined;
-    }
-   
+    this.formData = {};
+    const length = formElement.elements.length;
+    for (let i = 0; i < length; i++) {
+      if (formElement.elements[i].name !== '') {
+        this.formData[formElement.elements[i].name] = undefined;
+      }
+    };
   }
   
   _isFieldNonEmpty = el => el.trim().length > 0;
 
-  _isFielsdNonEmpty = obj => Object.values(obj).every(isFieldNonEmpty);
+  _isFielsdNonEmpty = obj => Object.values(obj).every(this._isFieldNonEmpty);
   
-  fillFormFromLS = () => {
+  fillFormFromLS = (formEl) => {
+    
     try {
       if (localStorage.length === 0) {
         return;
       }
-      const dataFormFromLS = JSON.parse(localStorage.getItem(keyFormDataLS));
+      const dataFormFromLS = JSON.parse(localStorage.getItem(this.keyFormDataLS));
     
       for (let key in dataFormFromLS) {
         const value = dataFormFromLS[key];
-        if (isFieldNonEmpty(value)) {
+
+        if (this._isFieldNonEmpty(value)) {
           formEl.elements[key].value = value;
-          formData[key] = value;
+          this.formData[key] = value;
         }
       }
     } catch (err) {
@@ -43,18 +43,17 @@ class LocalStorageForm {
   };
   
   saveDataFormToLS = event => {
-    const formField = event.target;
-    formData[formField.name] = formField.value;
-  
-    localStorage.setItem(keyFormDataLS, JSON.stringify(formData));
+    const formField = event.target; 
+    this.formData[formField.name] = formField.value;
+    localStorage.setItem(this.keyFormDataLS, JSON.stringify(this.formData));
   };
   
-  clearDataFormLS = event => {
+  clearDataFormLS = (event, formEl) => {
     event.preventDefault();
-    if (isFielsdNonEmpty(formData)) {
+    if (this._isFielsdNonEmpty(this.formData)) {
       formEl.reset();
-      Object.keys(formData).forEach(key => delete formData[key]);
-      localStorage.removeItem(keyFormDataLS);
+      Object.keys(this.formData).forEach(key => delete this.formData[key]);
+      localStorage.removeItem(this.keyFormDataLS);
     } else {
       iziToast.show({
         ...iziToastCommonOptions,
