@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         contact.style.transform = "translateY(0)";
                     }, i * 150);
                 });
-            }, 500);
+            }, 100);
         }
     }
 
