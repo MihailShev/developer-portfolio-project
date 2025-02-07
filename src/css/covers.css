@@ -1,21 +1,119 @@
-.footer {
-  padding: 20px 0;
-}
-.footer-desc {
-  text-align: center;
-}
-.footer-link {
+/*======== BASE STYLES ========*/
+.covers-section {
+  height: 508px;
   position: relative;
+  background-image: url("../img/covers/mobile-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
-.footer-link::before {
-  content: '';
+
+@media (min-resolution: 192dpi) {
+  .covers-section {
+    background-image: url("../img/covers/mobile-bg@2x.png");
+  }
+}
+
+.covers-container {
   position: absolute;
-  bottom: 6%;
-  left: 50%;
-  transform: translateX(-50%) skewX(-12deg);
-  z-index: -1;
-  width: 110%;
-  height: 24%;
-  background-color: #41d1ff;
-  transition: 200ms ease;
+  right: 0;
+  left: 0;
+  overflow: hidden;
 }
+
+.covers-list {
+  width: 1203px;
+  height: 508px;
+  display: flex;
+  transform: rotate(17deg);
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.first-row-item, .second-row-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.second-row-item {
+  animation-name: marqueeLineReverse;
+}
+
+
+@keyframes marqueeLine {
+  from {
+    transform: translateX(-20%);
+  }
+
+  to {
+    transform: translateX(-165%);
+  }
+}
+
+@keyframes marqueeLineReverse {
+  from {
+    transform: translateX(-165%);
+  }
+
+  to {
+    transform: translateX(-20%);
+  }
+}
+
+.covers-image {
+  width: 282px;
+  height: 162px;
+}
+/*======== BASE STYLES ========*/
+/*======== TABLET STYLES ========*/
+@media (min-width: 768px) {
+.covers-section {
+  height: 960px;
+  background-image: url("../img/covers/tablet-bg.png");
+}
+
+.covers-list {
+  width: 2281px;
+  height: 960px;
+  gap: 35px;
+}
+
+.covers-image {
+  width: 544px;
+  height: 314px;
+}
+}
+
+@media (min-width: 768px) and (min-resolution: 192dpi) {
+  .covers-section {
+    background-image: url("../img/covers/tablet-bg@2x.png");
+  }
+}
+/*======== TABLET STYLES ========*/
+/*======== DESKTOP STYLES ========*/
+@media (min-width: 1440px) {
+  .covers-section {
+    background-image: url("../img/covers/desktop-bg.png");
+  }
+
+  .covers-list {
+    width: 2356px;
+    gap: 45px;
+  }
+}
+
+@media (min-width: 1440px) and (min-resolution: 192dpi) {
+  .covers-section {
+    background-image: url("../img/covers/desktop-bg@2x.png");
+  }
+}
+/*======== DESKTOP STYLES ========*/
