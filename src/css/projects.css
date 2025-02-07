@@ -5,11 +5,10 @@
     padding: 32px 0px;
 }
 
-.projects-section-header
+.projects-section-title
 {
-    font-family: inherit;
-    font-weight: 600;
     font-size: 16px;
+    font-weight: 600;
     line-height: 1.5;
     letter-spacing: -0.02em;
     text-transform: uppercase;
@@ -36,7 +35,6 @@
 .projects-nav-buttons
 {
     display: flex;
-    flex-direction: row;
     column-gap: 12px;
     justify-content: center;
 }
@@ -65,7 +63,6 @@
 .project-technologies
 {
     display: flex;
-    flex-direction: row;
     gap: 6px;
     flex-wrap: wrap;
     margin-bottom: 96px;
@@ -73,9 +70,7 @@
 .project-technology
 {
     background-color: var(--text-color);
-    font-family: inherit;
     font-weight: 500;
-    font-size: 16px;
     letter-spacing: -0.02em;
     color: var(--background-color);
     border-radius: 60px;
@@ -83,9 +78,8 @@
     border: 1px solid rgba(28, 29, 32, 0.2);
 }
 
-.project-header
+.project-title
 {
-    font-family: inherit;
     font-size: 24px;
     font-weight: 500;
     line-height: 1.17;
@@ -100,9 +94,7 @@
 {
     display: block;
     color: var(--text-color);
-    font-family: inherit;
     font-weight: 500;
-    font-size: 16px;
     letter-spacing: -0.02em;
     background-color: var(--red-color);
     padding: 13px 32px;
@@ -160,7 +152,7 @@
         margin-bottom: 164px;
     }
 
-    .project-header
+    .project-title
     {
         line-height: 1;
         font-size: 44px;
