@@ -20,7 +20,6 @@
   background-image: url(/img/modal/modal-glass-effect.jpg);
   background-size: auto;
   background-repeat: no-repeat;
-  background-size: contain;
 }
 .modal-container {
   height: 100vh;
@@ -53,7 +52,9 @@
   fill: #fafafa;
 }
 .modal-order-btn {
-  margin: 289px 103px 0 103px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 289px;
   width: 164px;
   height: 45px;
   background-color: #ed3b44;
@@ -66,6 +67,9 @@
   background-color: #c92830;
 }
 @media only screen and (min-width: 768px) {
+  .modal-overlay {
+    background-image: none;
+  }
   .modal-container {
     opacity: 0;
     pointer-events: none;
@@ -74,5 +78,16 @@
 @media only screen and (min-resolution: 192dpi) {
   .modal-overlay {
     background-image: url(/img/modal/modal-glass-effect2x.jpg);
+  }
+}
+@media only screen and (min-resolution: 192dpi) and (min-width: 768px) {
+  .modal-overlay {
+    background-image: none;
+  }
+}
+@media only screen and (min-width: 375px) {
+  .modal-overlay {
+    background-position: center;
+    background-size: cover;
   }
 }
