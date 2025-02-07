@@ -11,7 +11,8 @@
     <form class="work-t-form">
       <div class="work-t-form__wrapper-input">
         <input class="work-t-form__input" type="email" id="email" name="email" placeholder="clients@gmail.com"
-          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required aria-label="input your email">
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" autocomplete="email" required
+          aria-label="input your email">
         <label class="work-t-form__label" for="email">clients@gmail.com</label>
         <p class="work-t-form__input-valid">Success!</p>
         <p class="work-t-form__input-invalid">Invalid email, try again</p>
@@ -23,7 +24,7 @@
         <label class="work-t-form__label" for="comment">comments</label>
       </div>
 
-      <button class="button work-t-form__button" type="submit">Send</button>
+      <button class="button work-t-form__button" type="submit" aria-label="Send form">Send</button>
     </form>
 
     <address class="work-t-address">

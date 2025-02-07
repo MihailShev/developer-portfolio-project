@@ -2,9 +2,11 @@ import { createModalWT } from './render-function';
 
 let modalElWT;
 let closeBtn;
+let bodyEl;
 
 const closeModalWindow = () => {
   modalElWT.remove();
+  bodyEl.style.overflow = 'auto';
   document.removeEventListener('click', closeModalWindowAnyKey);
   closeBtn.removeEventListener('click', closeModalWindow);
   document.removeEventListener('keydown', closeModalWindowESC);
@@ -25,6 +27,8 @@ const closeModalWindowAnyKey = e => {
 
 export const onModalMessage = () => {
   const footerEl = document.querySelector('.container.container-work-together');
+  bodyEl = document.querySelector('body');
+  bodyEl.style.overflow = 'hidden';
   modalElWT = createModalWT();
   footerEl.append(modalElWT);
   closeBtn = document.querySelector('.modal-wt__btn');
