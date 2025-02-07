@@ -9,10 +9,10 @@ inputWorkTogether.addEventListener('blur', function() {
   this.setAttribute('readonly', true);
   if (this.validity.valid) {
     if (this.value.trim() !== '') {
-      this.style.borderColor = '#3cbc81';
+      this.classList.add('js-success');
     } else {
       this.value = '';
-      this.style.borderColor = 'rgba(250, 250, 250, 0.2)';
+      this.classList.remove('js-success');
     }
   }
 });

@@ -1,7 +1,8 @@
+import iziToast from 'izitoast';
 const formData = { email: '', comment: '' };
 const keyFormDataLS = 'feedback-form-state';
 
-export const fillFormFromLS = (formEl) => {
+export const fillFormFromLS = formEl => {
   try {
     if (localStorage.length === 0) {
       return;
@@ -11,13 +12,16 @@ export const fillFormFromLS = (formEl) => {
 
     for (let key in dataFormFromLS) {
       const value = dataFormFromLS[key];
-      if (value) {
+      if (isFieldNonEmpty(value)) {
         formEl.elements[key].value = value;
         formData[key] = value;
       }
     }
   } catch (err) {
-    console.log(err);
+    iziToast.show({
+      ...iziToastCommonOptions,
+      message: `Sorry, you have error ${searchedThema}. Please try again!`,
+    });
   }
 };
 
@@ -28,8 +32,9 @@ export const saveDataFormToLS = event => {
   localStorage.setItem(keyFormDataLS, JSON.stringify(formData));
 };
 
-const isFielsdNonEmpty = obj => 
-  Object.values(obj).every((el) => el.length > 0);
+const isFieldNonEmpty = el => el.trim().length > 0;
+
+const isFielsdNonEmpty = obj => Object.values(obj).every(isFieldNonEmpty);
 
 export const clearDataFormLS = (event, formEl) => {
   event.preventDefault();
@@ -38,6 +43,9 @@ export const clearDataFormLS = (event, formEl) => {
     Object.keys(formData).forEach(key => delete formData[key]);
     localStorage.removeItem(keyFormDataLS);
   } else {
-    console.log('Fill please all fields');
+    iziToast.show({
+      ...iziToastCommonOptions,
+      message: 'Fill please all fields',
+    });
   }
 };
