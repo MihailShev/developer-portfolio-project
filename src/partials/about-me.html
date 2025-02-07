@@ -1,4 +1,4 @@
-<section id="section-about" class="section-about">
+<section id="about" class="section-about">
   <div class="container">
     <div class="about-me-cont">
       <div class="coutn-title">
@@ -41,83 +41,118 @@
       </picture>
     </div>
 
-    <div class="about-me-info">
-      <ul class="accordeon-list">
-        <li class="ac">
-          <div class="accordeon-title ac-header is-active">
-            <h3 class="title-text shadow-text">About me</h3>
-            <button type="button" class="btn-title ac-trigger">
-              <svg class="title-icon" width="20" height="20">
-                <use href="../img/icons/icons.svg#icon-arrow-up"></use>
-              </svg>
-            </button>
-          </div>
-          <div class="accordeon-content ac-panel">
-            <p class="accordeon-content-text">
-              I am Lloyd Jefferson, a talented programmer with extensive
-              expertise in software development. I have an understanding of
-              different programming languages and technologies, always ready to
-              improve my skills. I always follow the latest trends and look for
-              unconventional, creative solutions to problems. I have a high
-              level of analytical skills and am able to effectively solve even
-              the most difficult tasks encountered on the way.
-            </p>
-            <p class="accordeon-content-text">
-              Able to work both independently and in a team. I can effectively
-              cooperate with colleagues, exchanging ideas and finding optimal
-              solutions. Professional maturity allows you to calmly cope with
-              challenges and stressful situations, while maintaining a high
-              quality of work. <br />
-              I am always looking for opportunities for self-improvement. I
-              actively study new technologies and practices to stay abreast of
-              the latest innovations. I have a strong understanding of various
-              programming languages, frameworks and architectural concepts that
-              allow me to create efficient and scalable software.
-            </p>
-          </div>
-        </li>
+    <ul class="list-about accordion-container">
+      <li class="item-about ac">
+        <div class="head-cv-about-container">
+          <h3 class="small-title-about ac-header">About me</h3>
+          <button
+            type="button"
+            class="btn-about ac-trigger"
+            aria-label="open-close-button"
+          >
+            <svg class="icon-about icon-open" width="28" height="28">
+              <use href="../img/icons/icons.svg#icon-arrow-up"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="text-cv-about-container ac-panel">
+          <ul class="list-cv-about">
+            <li class="ac-text-about">
+              <p class="paragraph-about">
+                I am Lloyd Jefferson, a talented programmer with extensive
+                expertise in software development. I have an understanding of
+                different programming languages and technologies, always ready
+                to improve my skills. I always follow the latest trends and look
+                for unconventional, creative solutions to problems. I have a
+                high level of analytical skills and am able to effectively solve
+                even the most difficult tasks encountered on the way.
+              </p>
+            </li>
+            <li class="ac-text-about">
+              <p class="paragraph-about">
+                Able to work both independently and in a team. I can effectively
+                cooperate with colleagues, exchanging ideas and finding optimal
+                solutions. Professional maturity allows you to calmly cope with
+                challenges and stressful situations, while maintaining a high
+                quality of work. I am always looking for opportunities for
+                self-improvement. I actively study new technologies and
+                practices to stay abreast of the latest innovations. I have a
+                strong understanding of various programming languages,
+                frameworks and architectural concepts that allow me to create
+                efficient and scalable software.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </li>
 
-        <li class="ac">
-          <div class="accordeon-title ac-header">
-            <h3 class="title-text accent-color-gray shadow-text">Role</h3>
-            <button type="button" class="btn-title ac-trigger">
-              <svg class="title-icon" width="20" height="20">
-                <use href="../img/icons/icons.svg#icon-arrow-up"></use>
-              </svg>
-            </button>
-          </div>
-          <div class="accordeon-content ac-panel hidden">
-            <p class="accordeon-content-text">Frontend development</p>
-            <p class="accordeon-content-text">HeadlessCMS,Wordpress</p>
-            <p class="accordeon-content-text">Blender(enjoy)</p>
-          </div>
-        </li>
+      <li class="item-about ac">
+        <div class="head-cv-about-container">
+          <h3 class="small-title-about ac-header">Role</h3>
+          <button
+            type="button"
+            class="btn-about ac-trigger"
+            id="btn-role"
+            aria-label="open-close-button"
+          >
+            <svg class="icon-about icon-close" width="28" height="28">
+              <use href="../img/icons/icons.svg#icon-arrow-up"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="text-cv-about-container ac-panel">
+          <ul class="list-cv-about">
+            <li class="ac-text-about">
+              <p class="paragraph-about">Frontend development</p>
+            </li>
+            <li class="ac-text-about">
+              <p class="paragraph-about">HeadlessCMS, Wordpress</p>
+            </li>
+            <li class="ac-text-about">
+              <p class="paragraph-about">Blender(enjoy)</p>
+            </li>
+          </ul>
+        </div>
+      </li>
 
-        <li class="ac">
-          <div class="accordeon-title ac-header shadow-text">
-            <h3 class="title-text accent-color-gray">Education</h3>
-            <button type="button" class="btn-title ac-trigger">
-              <svg class="title-icon" width="20" height="20">
-                <use href="../img/icons/icons.svg#icon-arrow-up"></use>
-              </svg>
-            </button>
-          </div>
-          <div class="accordeon-content ac-panel hidden">
-            <p class="accordeon-content-text">
-              2018 - 2019 / Frontend Development Diploma, GoIT IT School, New
-              York
-            </p>
-            <p class="accordeon-content-text">
-              2019 - 2020 / Advanced Web Development Certificate, GoIT IT
-              School, New York
-            </p>
-            <p class="accordeon-content-text">
-              2020 - 2022 / Advanced Blender Animation Techniques, Udemy
-            </p>
-          </div>
-        </li>
-      </ul>
-    </div>
+      <li class="item-about ac">
+        <div class="head-cv-about-container">
+          <h3 class="small-title-about ac-header">Education</h3>
+          <button
+            type="button"
+            class="btn-about ac-trigger"
+            id="btn-edu"
+            aria-label="open-close-button"
+          >
+            <svg class="icon-about icon-close" width="28" height="28">
+              <use href="../img/icons/icons.svg#icon-arrow-up"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="text-cv-about-container ac-panel">
+          <ul class="list-cv-about">
+            <li class="ac-text-about">
+              <p class="paragraph-about">
+                2018 - 2019 / Frontend Development Diploma, GoIT IT <br />
+                School, New York
+              </p>
+            </li>
+            <li class="ac-text-about">
+              <p class="paragraph-about">
+                2019 - 2020 / Advanced Web Development Certificate, GoIT IT
+                <br />
+                School, New York
+              </p>
+            </li>
+            <li class="ac-text-about">
+              <p class="paragraph-about">
+                2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+              </p>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
 
     <div class="about-me-swiper-container">
       <div class="about-me-skills swiper my-thumbs">

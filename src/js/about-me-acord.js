@@ -1,26 +1,38 @@
 import Accordion from 'accordion-js';
 
-import Swiper from 'swiper';
-import 'swiper/css';
+const buttons = document.querySelectorAll('.btn-about');
 
-const accordeonList = document.querySelector('.accordeon-list');
+const accordionItems = document.querySelectorAll('.ac');
 
-const accordion = new Accordion(accordeonList, {
-  duration: 600,
-  showMultiple: true,
-  openOnInit: [0],
-});
+document.addEventListener('DOMContentLoaded', () => {
+  const acc = new Accordion('.accordion-container', {
+    showMultiple: true,
+    openOnInit: [0],
+  });
+  accordionItems.forEach(item => {
+    const header = item.querySelector('.ac-header');
+    const panel = item.querySelector('.ac-panel');
 
-const accordionItems = document.querySelectorAll('.accordeon-title');
-
-accordionItems.forEach(item => {
-  item.addEventListener('click', function () {
-    const arrow = item.querySelector('.title-icon');
-    const description = item.nextElementSibling;
-    arrow.classList.toggle('active-is');
-    description.classList.toggle('hidden');
+    header.addEventListener('click', () => {
+      const isActive = panel.classList.contains('active');
+      if (isActive) {
+        acc.close(panel);
+      } else {
+        acc.open(panel);
+      }
+    });
+  });
+  buttons.forEach(button => {
+    button.addEventListener('click', event => {
+      const icon = event.currentTarget.querySelector('.icon-about');
+      icon.classList.toggle('icon-close');
+      icon.classList.toggle('icon-open');
+    });
   });
 });
+
+import Swiper from 'swiper';
+import 'swiper/css';
 
 const buttonEl = document.querySelector('.swiper-next');
 const swiperEl = document.querySelector('.about-me-swiper-container');
@@ -57,9 +69,10 @@ buttonEl.addEventListener('click', () => {
 
 swiperEl.addEventListener('keydown', function (event) {
   event.preventDefault();
-  if (event.key === 'Tab') {
+
+  if (event.key === 'ArrowRight') {
     swiperAbout.slideNext();
-  } else {
+  } else if (event.key === 'ArrowLeft') {
     swiperAbout.slidePrev();
   }
 });
