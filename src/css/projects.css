@@ -92,14 +92,13 @@
 
 .project-link
 {
-    display: block;
+    display: inline-block;
     color: var(--text-color);
     font-weight: 500;
     letter-spacing: -0.02em;
     background-color: var(--red-color);
     padding: 13px 32px;
     border-radius: 60px;
-    width: 141px;
     transition: background-color 250ms ease-in;
 }
 
@@ -161,7 +160,6 @@
 
     .project-link
     {
-        width: 177px;
         padding: 18px 50px;
     }
 
