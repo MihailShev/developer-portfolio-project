@@ -3,15 +3,15 @@ const exitbtn = document.querySelector('.close-btn');
 const backdrop = document.querySelector('.modal-overlay');
 const orderbtn = document.querySelector('.modal-order-btn');
 
-exitbtn.addEventListener('click', function () {
+function closeModal() {
   backdrop.classList.add('is-closed');
-});
-backdrop.addEventListener('click', function () {
-  backdrop.classList.add('is-closed');
-});
+}
+
+exitbtn.addEventListener('click', closeModal);
+backdrop.addEventListener('click', closeModal);
 document.addEventListener('keydown', function (event) {
   if (event.key === 'Escape') {
-    backdrop.classList.add('is-closed');
+    closeModal();
   }
 });
 
