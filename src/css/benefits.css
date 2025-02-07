@@ -1,27 +1,6 @@
-/* .badges-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-}
-.badges-link {
-  display: block;
-  padding: 8px 16px;
-  border: 1px solid;
-  border-radius: 8px;
-  transition: 200ms ease-in;
-}
-.badges-link:hover,
-.badges-link:focus {
-  transform: scale(1.06);
-  color: #747bff;
-} */
-
 .benefit-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 32px;
 }
 
@@ -66,7 +45,6 @@
   border-radius: 10px;
   background: var(--red-color);
   padding: 12px;
-  margin-top: 0px;
   margin-bottom: 64px;
 }
 
@@ -81,17 +59,14 @@
   font-size: 20px;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  margin-top: 0px;
   margin-bottom: 8px;
 }
 
 .item-text {
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
-  margin: 0px;
 }
 
 .scroll-btn {
@@ -102,13 +77,13 @@
 
 @media (min-width: 768px) {
   .benefit-content {
+    align-items: flex-start;
     gap: 64px;
   }
 
   .list-of-benefits {
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
     justify-content: flex-start;
   }
 
