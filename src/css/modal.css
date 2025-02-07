@@ -16,13 +16,15 @@
   pointer-events: none;
 }
 .modal-overlay {
-  padding: 32px 16px;
+  padding: 32px 16px 64px 16px;
   background-image: url(/img/modal/modal-glass-effect.jpg);
   background-size: auto;
   background-repeat: no-repeat;
 }
 .modal-container {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
 }
 .close-btn {
@@ -38,7 +40,6 @@
   gap: 12px;
 }
 .modal-menu-btn {
-  text-decoration: underline;
   margin-bottom: 12px;
   transition: color 250ms ease-in;
 }
@@ -52,15 +53,13 @@
   fill: #fafafa;
 }
 .modal-order-btn {
-  display: block;
-  margin: 0 auto;
-  margin-top: 289px;
   width: 164px;
   height: 45px;
   background-color: #ed3b44;
   color: #fafafa;
   border-radius: 60px;
   transition: background-color 250ms ease-in;
+  margin-top: 289px;
 }
 .modal-order-btn:hover,
 .modal-order-btn:focus {
@@ -68,21 +67,12 @@
 }
 @media only screen and (min-width: 768px) {
   .modal-overlay {
-    background-image: none;
-  }
-  .modal-container {
-    opacity: 0;
-    pointer-events: none;
+    display: none;
   }
 }
 @media only screen and (min-resolution: 192dpi) {
   .modal-overlay {
     background-image: url(/img/modal/modal-glass-effect2x.jpg);
-  }
-}
-@media only screen and (min-resolution: 192dpi) and (min-width: 768px) {
-  .modal-overlay {
-    background-image: none;
   }
 }
 @media only screen and (min-width: 375px) {
