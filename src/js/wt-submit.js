@@ -1,13 +1,13 @@
-import {
-  clearDataFormLS,
-  fillFormFromLS,
-  saveDataFormToLS,
-} from './local-storage';
+import LocalStorageForm from './local-storage';
 import { postQueryComment } from './portfolio-api';
 import { onModalMessage } from './wt-modal';
 import iziToast from 'izitoast';
+import { iziToastCommonOptions } from '/js/iziToastCommonOptions';
 
 const formWorkTogether = document.querySelector('.work-t-form');
+
+let localStorageForm = new LocalStorageForm('form-work-together', formWorkTogether);
+console.log(localStorage);
 
 const createPostQuery = async e => {
   e.preventDefault();
@@ -20,8 +20,8 @@ const createPostQuery = async e => {
   }
 
   try {
-    const { status } = await postQueryComment(emailValue, commentValue);
-    clearDataFormLS(e, formWorkTogether);
+    await postQueryComment(emailValue, commentValue);
+    localStorageForm.clearDataFormLS(e);
     const commentEl = formWorkTogether.querySelector('[id="comment"]');
     commentEl.classList.remove('js-success');
     onModalMessage();
@@ -33,11 +33,11 @@ const createPostQuery = async e => {
   }
 };
 
-fillFormFromLS(formWorkTogether);
+localStorageForm.fillFormFromLS();
 
 if (formWorkTogether.elements[1].value.trim() !== '') {
   formWorkTogether.elements[1].classList.add('js-success');
 }
 
-formWorkTogether.addEventListener('input', saveDataFormToLS);
+formWorkTogether.addEventListener('input', localStorageForm.saveDataFormToLS);
 formWorkTogether.addEventListener('submit', createPostQuery);
