@@ -1,1 +1,1 @@
-
+import './js/reviews';
