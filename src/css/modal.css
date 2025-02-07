@@ -42,6 +42,7 @@
 .modal-menu-btn {
   margin-bottom: 12px;
   transition: color 250ms ease-in;
+  text-decoration: underline;
 }
 .modal-menu-btn:hover,
 .modal-menu-btn:focus {
