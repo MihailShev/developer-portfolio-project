@@ -1,18 +1,52 @@
 import { fetchReviews } from './reviews-request';
 import { createRewiewsCard } from './reviews-rendering';
+import { createErrorCard } from './reviews-rendering';
+// import Swiper from 'swiper';
+import Swiper from 'swiper/bundle';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
 const reviewsList = document.querySelector('.reviews-list');
-// await fetchReviews();
+
 console.dir(fetchReviews);
+
 const createRewiews = async () => {
-  const { data } = await fetchReviews();
-  const cardTemplate = data.map(el => createRewiewsCard(el)).join('');
-  reviewsList.innerHTML = cardTemplate;
+  try {
+    const { data } = await fetchReviews();
+    const cardTemplate = data.map(el => createRewiewsCard(el)).join('');
+    reviewsList.innerHTML = cardTemplate;
+  } catch (error) {
+    reviewsList.innerHTML = createErrorCard();
+  }
 };
 createRewiews();
-// const swiper = new Swiper('.reviews-container', {
-//   speed: 400,
-//   spaceBetween: 100,
-// });
-// const swiper = document.querySelector('.reviews-container').swiper;
+const swiper = new Swiper('.reviews-wrapper', {
+  initialSlide: 0,
+  slidesPerView: 'auto',
+  centeredSlides: false,
+  watchOverflow: true,
+  speed: 200,
+  navigation: {
+    nextEl: '.rev-swiper-button-next',
+    prevEl: '.rev-swiper-button-prev',
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 16,
+    },
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    // when window width is >= 1440px
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+  },
+});
 
-// swiper.slideNext();
+swiper.slideNext();

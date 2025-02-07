@@ -1,7 +1,27 @@
-<section class="reviews">
-  <div class="reviews-container container">
-    <h2>Reviews</h2>
-    <ul class="reviews-list swiper-wrapper"></ul>
+<section class="reviews" id="reviews" aria-label="Reviews">
+  <div class="container reviews-container">
+    <h2 class="reviews-title">Reviews</h2>
+    <div class="reviews-wrapper">
+      <ul class="reviews-list swiper-wrapper"></ul>
+    </div>
+    <div class="reviews-buttons">
+      <button
+        class="rev-swiper-button-prev rev-btn"
+        type="button"
+        aria-label="Previous reviews"
+      >
+        <svg class="rev-prev" width="24" height="24">
+          <use href="../img/icons/icons.svg#icon-arrow-prew"></use>
+        </svg></button
+      ><button
+        class="rev-swiper-button-next rev-btn"
+        type="button"
+        aria-label="Next reviews"
+      >
+        <svg class="rev-next" width="24" height="24">
+          <use href="../img/icons/icons.svg#icon-arrow-next"></use>
+        </svg>
+      </button>
+    </div>
   </div>
-  <script type="module" src="../js/reviews.js" defer></script>
 </section>

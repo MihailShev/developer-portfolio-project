@@ -1,20 +1,40 @@
+.reviews {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.reviews-wrapper {
+  overflow: hidden;
+  display: flex;
+}
+.reviews-title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--shadow-text-color);
+  margin-bottom: 32px;
+}
 .reviews-list {
   display: flex;
-  gap: 16px;
+  margin-bottom: 32px;
+  min-width: 343px;
 }
 .reviews-item {
-  width: 343px;
-  /* height: 302px; */
+  min-width: 343px;
+  min-height: 352px;
+  margin: 0px;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
   padding: 32px 24px;
 }
+
 .reviews-img {
   width: 48px;
   border-radius: 10px;
   margin-bottom: 32px;
 }
-.reviews-title {
+.reviews-name {
   margin-bottom: 8px;
   font-weight: 600;
   font-size: 20px;
@@ -28,16 +48,84 @@
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
 }
+.reviews-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.rev-swiper-button-prev,
+.rev-swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  border-radius: 60px;
+  padding: 14px;
+  width: 52px;
+  height: 52px;
+  transition: border-color 200ms ease-in;
+}
+.rev-prev,
+.rev-next {
+  fill: var(--text-color);
+  transition: fill 200ms ease-in;
+}
+.swiper-button-disabled {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+}
+.swiper-button-disabled .rev-prev,
+.swiper-button-disabled .rev-next {
+  fill: #3b3b3b;
+}
+.error-title {
+  margin-bottom: 60px;
+}
+.error-text {
+  font-size: 32px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.tablet-err,
+.desctop-err {
+  display: none;
+}
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
+  .reviews {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
   .reviews-item {
-    width: 344px;
+    min-width: 344px;
+  }
+  .reviews-list {
+    min-width: 704px;
+  }
+  .rev-swiper-button-prev,
+  .rev-swiper-button-next {
+    width: 68px;
+    height: 68px;
+  }
+  .tablet-err {
+    display: block;
   }
 }
 
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
+  .reviews {
+    padding-top: 154px;
+    padding-bottom: 154px;
+  }
   .reviews-item {
-    width: 332px;
+    min-width: 332px;
+  }
+  .reviews-list {
+    min-width: 1376px;
+  }
+  .desctop-err {
+    display: block;
   }
 }
