@@ -24,7 +24,6 @@
   font-weight: 500;
   font-size: 20px;
   letter-spacing: -0.02em;
-  color: var(--text-color);
 }
 /* -------Burger------ */
 .menu-toggle {
@@ -35,9 +34,6 @@
   justify-content: center;
   align-items: center;
   gap: 6px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
   position: relative;
   z-index: 110;
 }
@@ -89,14 +85,11 @@
     gap: 12px;
     background: transparent;
     position: relative;
-
-  
   }
 
   .nav-menu-list {
     font-weight: 500;
   letter-spacing: -0.02em;
-  color: var(--text-color);
   text-align: center;
   list-style: none;
   padding: 0;
@@ -117,13 +110,10 @@
     position: relative;
     font-weight: 500;
     letter-spacing: -0.02em;
+    color: var(--text-color);
     text-decoration: underline;
     text-decoration-skip-ink: none;
-    color: var(--text-color);
     padding: 10px;
-    width: 67px;
-    height: 39px;
-    cursor: pointer;
     top: 0;
   }
 
