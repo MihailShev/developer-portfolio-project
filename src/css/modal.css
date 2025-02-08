@@ -77,6 +77,10 @@
 .modal-order-btn:focus {
   background-color: #c92830;
 }
+
+.close {
+  display: none;
+}
 @media only screen and (min-width: 768px) {
   .modal-overlay {
     display: none;

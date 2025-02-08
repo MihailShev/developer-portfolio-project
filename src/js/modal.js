@@ -2,9 +2,13 @@ const modal = document.querySelector('.modal-container');
 const exitbtn = document.querySelector('.close-btn');
 const backdrop = document.querySelector('.modal-overlay');
 const orderbtn = document.querySelector('.modal-order-btn');
+const btnOpenMenu = document.querySelector('.menu-toggle');
 
 function closeModal() {
   backdrop.classList.add('is-closed');
+}
+function openModal() {
+  backdrop.classList.remove('close');
 }
 
 exitbtn.addEventListener('click', closeModal);
@@ -14,5 +18,7 @@ document.addEventListener('keydown', function (event) {
     closeModal();
   }
 });
+
+btnOpenMenu.addEventListener('click', openModal);
 
 orderbtn.addEventListener('click', function () {});
