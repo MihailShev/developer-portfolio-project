@@ -22,15 +22,15 @@ document.addEventListener('DOMContentLoaded', function () {
       const targetSection = document.getElementById(targetId);
 
       if (targetSection) {
-        const headerOffset =
-          document.querySelector('header')?.offsetHeight || 80;
-        const elementPosition = targetSection.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.scrollY - headerOffset;
+        // const headerOffset =
+        //   document.querySelector('header')?.offsetHeight || 80;
+        // const elementPosition = targetSection.getBoundingClientRect().top;
+        // const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth',
-        });
+        // window.scrollTo({
+        //   top: offsetPosition,
+        //   behavior: 'smooth',
+        // });
       }
 
       menuBtn.classList.remove('active');
