@@ -40,7 +40,6 @@
   font-size: 20px;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  color: var(--text-color);
 }
 .reviews-text {
   font-weight: 500;
@@ -74,6 +73,7 @@
 }
 .swiper-button-disabled {
   border: 1px solid rgba(250, 250, 250, 0.2);
+  cursor: default;
 }
 .swiper-button-disabled .rev-prev,
 .swiper-button-disabled .rev-next {
