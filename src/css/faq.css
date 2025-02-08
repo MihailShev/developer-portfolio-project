@@ -1,6 +1,6 @@
 @import 'accordion-js/dist/accordion.min.css';
 
-.container {
+.container-fag {
   margin-top: 96px;
   margin-bottom: 96px;
 }
@@ -22,7 +22,6 @@
   font-size: 20px;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  color: var(--text-color);
 }
 
 .list-item:last-child .list-item-text {
@@ -77,14 +76,14 @@
 /* Styles for Tablet devices */
 
 @media only screen and (min-width: 768px) {
-  .container {
+  .container-fag {
     max-width: 768px;
     padding: 0 32px;
   }
 }
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1280px) {
-  .container {
+  .container-fag {
     max-width: 1280px;
   }
   .list {
