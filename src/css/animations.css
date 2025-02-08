@@ -1,0 +1,19 @@
+@keyframes marqueeLine {
+    from {
+        transform: translateX(-20%);
+    }
+
+    to {
+        transform: translateX(-165%);
+    }
+}
+
+@keyframes marqueeLineReverse {
+    from {
+        transform: translateX(-165%);
+    }
+
+    to {
+        transform: translateX(-20%);
+    }
+}

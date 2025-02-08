@@ -26,7 +26,6 @@
   height: 508px;
   display: flex;
   transform: rotate(17deg);
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 25px;
 }
@@ -37,36 +36,17 @@
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  animation-name: marqueeLine;
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-play-state: paused;
 }
 
-.second-row-item {
+.first-row-item.animate {
+  animation-name: marqueeLine;
+}
+
+.second-row-item.animate {
   animation-name: marqueeLineReverse;
-}
-
-
-@keyframes marqueeLine {
-  from {
-    transform: translateX(-20%);
-  }
-
-  to {
-    transform: translateX(-165%);
-  }
-}
-
-@keyframes marqueeLineReverse {
-  from {
-    transform: translateX(-165%);
-  }
-
-  to {
-    transform: translateX(-20%);
-  }
 }
 
 .covers-image {
