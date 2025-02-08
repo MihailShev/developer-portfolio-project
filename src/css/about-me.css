@@ -77,19 +77,28 @@
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.item-about:hover,
-.is-active .btn-about {
+.item-about:hover {
   fill: var(--background-color);
 }
 
-.btn-about:hover,
-.is-active .btn-about {
-  rotate: 180deg;
+.item-about:hover .btn-about {
   background-color: var(--text-color);
 }
 
-.item-about:hover .btn-about .icon-about {
-  fill: var(--text-color);
+.item-about:hover .icon-about {
+  fill: var(--background-color);
+  transition: fill 250ms ease-in;
+}
+
+.is-active .btn-about {
+  transform: rotate(180deg);
+  background-color: var(--text-color);
+  transition: background-color 250ms ease-in, transform 250ms ease-in;
+}
+
+.is-active .icon-about {
+  fill: var(--background-color);
+  transition: fill 250ms ease-in;
 }
 
 /* ==================SWIPER=================== */
