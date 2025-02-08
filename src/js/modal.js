@@ -8,7 +8,7 @@ function closeModal() {
   backdrop.classList.add('is-closed');
 }
 function openModal() {
-  backdrop.classList.remove('close');
+  backdrop.classList.remove('is-closed');
 }
 
 exitbtn.addEventListener('click', closeModal);
