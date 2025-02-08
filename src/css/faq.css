@@ -1,9 +1,9 @@
-/* Styles for Mobile devices */
+@import 'accordion-js/dist/accordion.min.css';
+
 .container {
   margin-top: 96px;
   margin-bottom: 96px;
 }
-
 .title-fag {
   margin-bottom: 32px;
 }
