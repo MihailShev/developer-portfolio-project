@@ -17,8 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const isActive = panel.classList.contains('active');
       if (isActive) {
         acc.close(panel);
+        panel.classList.remove('active');
+        header.classList.remove('active');
       } else {
         acc.open(panel);
+        panel.classList.add('active');
+        header.classList.add('active');
       }
     });
   });

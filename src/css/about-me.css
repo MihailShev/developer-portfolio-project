@@ -14,7 +14,6 @@
 }
 
 .about-me-text {
-  color: var(--text-color);
   font-size: 24px;
   line-height: 1.16;
   letter-spacing: -0.03em;
@@ -56,6 +55,7 @@
   width: 36px;
   height: 36px;
   margin-bottom: 0;
+  transition: 250ms;
 }
 
 .ac-text-about {
@@ -84,7 +84,12 @@
 
 .btn-about:hover,
 .is-active .btn-about {
+  rotate: 180deg;
   background-color: var(--text-color);
+}
+
+.item-about:hover .btn-about .icon-about {
+  fill: var(--text-color);
 }
 
 /* ==================SWIPER=================== */
