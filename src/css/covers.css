@@ -41,11 +41,11 @@
   animation-iteration-count: infinite;
 }
 
-.first-row-item.animate {
+.animate {
   animation-name: marqueeLine;
 }
 
-.second-row-item.animate {
+.animateReverse {
   animation-name: marqueeLineReverse;
 }
 
