@@ -39,12 +39,5 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// ДЛЯ БУРГЕР МЕНЮ
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   const menuToggle = document.querySelector('.menu-toggle');
 
-//   menuToggle.addEventListener('click', function () {
-//     this.classList.toggle('active');
-//   });
-// });
