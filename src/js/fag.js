@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const iconUp = this.querySelector('.icon-up');
       const iconDown = this.querySelector('.icon-down');
 
-      // Переключаем класс "hidden" на иконках
       if (parent.classList.contains('is-active')) {
         iconUp.classList.remove('hidden');
         iconDown.classList.add('hidden');

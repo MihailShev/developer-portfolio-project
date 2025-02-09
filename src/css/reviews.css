@@ -1,6 +1,6 @@
 .reviews {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  margin-top: 64px;
+  margin-bottom: 64px;
 }
 .reviews-wrapper {
   overflow: hidden;
@@ -24,7 +24,6 @@
   clip-path: none;
   clip: auto;
   overflow: visible;
-  opacity: 1;
   transition: opacity 200ms ease-in;
 }
 .loader {
@@ -99,6 +98,19 @@
   height: 52px;
   transition: border-color 200ms ease-in;
 }
+
+.rev-swiper-button-prev:hover,
+.rev-swiper-button-prev:focus,
+.rev-swiper-button-next:hover,
+.rev-swiper-button-next:focus {
+  border-color: #dedede;
+}
+
+.rev-swiper-button-prev:disabled,
+.rev-swiper-button-next:disabled {
+  border-color: rgba(250, 250, 250, 0.5);
+}
+
 .rev-prev,
 .rev-next {
   fill: var(--text-color);
@@ -136,8 +148,8 @@
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
   .reviews {
-    padding-top: 96px;
-    padding-bottom: 96px;
+    margin-top: 96px;
+    margin-bottom: 96px;
   }
   .reviews-item {
     min-width: 344px;
@@ -165,8 +177,8 @@
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
   .reviews {
-    padding-top: 154px;
-    padding-bottom: 154px;
+    margin-top: 164px;
+    margin-bottom: 164px;
   }
   .reviews-item {
     min-width: 332px;

@@ -1,8 +1,12 @@
+.section-about {
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
 .about-me-cont {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-  margin-top: 64px;
   margin-bottom: 32px;
 }
 
@@ -44,20 +48,6 @@
   color: var(--shadow-text-color);
 }
 
-.btn-about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border: 1px solid var(--shadow-text-color);
-  border-radius: 100px;
-  padding: 9px;
-  width: 36px;
-  height: 36px;
-  margin-bottom: 0;
-  transition: 250ms;
-}
-
 .head-cv-about-container {
   display: flex;
   align-items: center;
@@ -85,7 +75,6 @@
   width: 36px;
   height: 36px;
   margin-bottom: 0;
-  transition: 250ms;
 }
 
 .text-cv-about-container {
@@ -95,7 +84,7 @@
 }
 
 .item-about.open .text-cv-about-container {
-  max-height: none; /* Відкривається без обмежень */
+  max-height: none;
 }
 
 .paragraph-about {
@@ -130,6 +119,9 @@
 .item-about.open .icon-about {
   fill: var(--background-color);
   transition: fill 250ms ease-in;
+}
+.swiper-wrapper {
+  align-items: center !important;
 }
 
 /* ==================SWIPER=================== */
@@ -167,6 +159,10 @@
   border: none;
 }
 
+.swiper-slide {
+  transition: border 250ms ease-in !important;
+}
+
 .swiper-arrow-svg {
   fill: var(--shadow-text-color);
 }
@@ -178,11 +174,16 @@
   color: var(--text-color);
 }
 
-.about-me-swiper-container {
-  margin-bottom: 64px;
-}
-
 @media screen and (min-width: 768px) {
+  .section-about {
+    margin-top: 96px;
+    margin-bottom: 96px;
+  }
+
+  .swiper-content-wrap {
+    height: 170px !important;
+  }
+
   .coutn-title {
     padding: 64px;
     padding-bottom: 436px;
@@ -218,13 +219,18 @@
     width: 40px;
     height: 40px;
   }
-
-  .about-me-swiper-container {
-    margin-bottom: 96px;
-  }
 }
 
 @media screen and (min-width: 1440px) {
+  .section-about {
+    margin-top: 164px;
+    margin-bottom: 164px;
+  }
+
+  .swiper-content-wrap {
+    height: 200px !important;
+  }
+
   .about-me-cont {
     flex-direction: row;
     column-gap: 16px;
@@ -254,9 +260,5 @@
   .about-me-skills {
     width: 1200px;
     height: 200px;
-  }
-
-  .about-me-swiper-container {
-    margin-bottom: 164px;
   }
 }
