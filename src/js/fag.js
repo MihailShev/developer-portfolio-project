@@ -6,17 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const triggers = document.querySelectorAll('.ac-trigger');
 
   triggers.forEach(trigger => {
+    const content = trigger.querySelector('.ac-panel');
+    const btn = trigger.querySelector('.btn-faq');
+    
     trigger.addEventListener('click', function () {
-      const parent = this.closest('.list-item');
-      const iconUp = this.querySelector('.icon-up');
-      const iconDown = this.querySelector('.icon-down');
+      const isOpen = trigger.classList.contains('open');
 
-      if (parent.classList.contains('is-active')) {
-        iconUp.classList.remove('hidden');
-        iconDown.classList.add('hidden');
+      if (isOpen) {
+        trigger.classList.remove('open');
       } else {
-        iconUp.classList.add('hidden');
-        iconDown.classList.remove('hidden');
+        trigger.classList.add('open');
       }
     });
   });
