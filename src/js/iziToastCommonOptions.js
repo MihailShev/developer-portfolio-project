@@ -1,0 +1,1 @@
+export const iziToastCommonOptions = { position: 'topRight', messageSize: 20 };
