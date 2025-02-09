@@ -2,16 +2,17 @@
 .covers-section {
   height: 508px;
   position: relative;
-  background-image: url("../img/covers/mobile-bg.png");
+  background-image: url('../img/covers/mobile-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
   overflow: hidden;
+  margin-top: 64px;
 }
 
 @media (min-resolution: 192dpi) {
   .covers-section {
-    background-image: url("../img/covers/mobile-bg@2x.png");
+    background-image: url('../img/covers/mobile-bg@2x.png');
   }
 }
 
@@ -31,7 +32,8 @@
   gap: 25px;
 }
 
-.first-row-item, .second-row-item {
+.first-row-item,
+.second-row-item {
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -57,33 +59,35 @@
 /*======== BASE STYLES ========*/
 /*======== TABLET STYLES ========*/
 @media (min-width: 768px) {
-.covers-section {
-  height: 960px;
-  background-image: url("../img/covers/tablet-bg.png");
-}
+  .covers-section {
+    margin-top: 96px;
+    height: 960px;
+    background-image: url('../img/covers/tablet-bg.png');
+  }
 
-.covers-list {
-  width: 2281px;
-  height: 960px;
-  gap: 35px;
-}
+  .covers-list {
+    width: 2281px;
+    height: 960px;
+    gap: 35px;
+  }
 
-.covers-image {
-  width: 544px;
-  height: 314px;
-}
+  .covers-image {
+    width: 544px;
+    height: 314px;
+  }
 }
 
 @media (min-width: 768px) and (min-resolution: 192dpi) {
   .covers-section {
-    background-image: url("../img/covers/tablet-bg@2x.png");
+    background-image: url('../img/covers/tablet-bg@2x.png');
   }
 }
 /*======== TABLET STYLES ========*/
 /*======== DESKTOP STYLES ========*/
 @media (min-width: 1440px) {
   .covers-section {
-    background-image: url("../img/covers/desktop-bg.png");
+    margin-top: 164px;
+    background-image: url('../img/covers/desktop-bg.png');
   }
 
   .covers-list {
@@ -94,7 +98,7 @@
 
 @media (min-width: 1440px) and (min-resolution: 192dpi) {
   .covers-section {
-    background-image: url("../img/covers/desktop-bg@2x.png");
+    background-image: url('../img/covers/desktop-bg@2x.png');
   }
 }
 /*======== DESKTOP STYLES ========*/

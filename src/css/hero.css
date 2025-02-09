@@ -43,6 +43,14 @@
   align-items: center;
   text-align: center;
   border: 1px solid rgba(250, 250, 250, 0.2);
+  transition: border 250ms ease-in;
+}
+
+.email:hover,
+.email:focus,
+.contact-list:hover,
+.contact-list:focus {
+  border-color: #dedede;
 }
 
 .email {
@@ -55,6 +63,7 @@
   justify-content: center;
   width: 178px;
   height: 37px;
+  transition: border 250ms ease-in;
 }
 
 @media screen and (min-width: 768px) {
