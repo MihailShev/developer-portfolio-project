@@ -1,36 +1,21 @@
-import Accordion from 'accordion-js';
+document.addEventListener('DOMContentLoaded', function () {
+  const accordionItems = document.querySelectorAll('.item-about');
 
-const buttons = document.querySelectorAll('.btn-about');
+  const firstItem = accordionItems[0];
+  firstItem.classList.add('open');
 
-const accordionItems = document.querySelectorAll('.ac');
-
-document.addEventListener('DOMContentLoaded', () => {
-  const acc = new Accordion('.accordion-container', {
-    showMultiple: true,
-    openOnInit: [0],
-  });
   accordionItems.forEach(item => {
-    const header = item.querySelector('.ac-header');
-    const panel = item.querySelector('.ac-panel');
+    const btn = item.querySelector('.btn-about');
+    const content = item.querySelector('.text-cv-about-container');
 
-    header.addEventListener('click', () => {
-      const isActive = panel.classList.contains('active');
-      if (isActive) {
-        acc.close(panel);
-        panel.classList.remove('active');
-        header.classList.remove('active');
+    btn.addEventListener('click', function () {
+      const isOpen = item.classList.contains('open');
+
+      if (isOpen) {
+        item.classList.remove('open');
       } else {
-        acc.open(panel);
-        panel.classList.add('active');
-        header.classList.add('active');
+        item.classList.add('open');
       }
-    });
-  });
-  buttons.forEach(button => {
-    button.addEventListener('click', event => {
-      const icon = event.currentTarget.querySelector('.icon-about');
-      icon.classList.toggle('icon-close');
-      icon.classList.toggle('icon-open');
     });
   });
 });
