@@ -89,17 +89,17 @@
 
   .nav-menu-list {
     font-weight: 500;
-  letter-spacing: -0.02em;
-  text-align: center;
-  list-style: none;
-  padding: 0;
-  display: none; 
-  position: absolute;
-  top: 100%; 
-  left: 0;
-  background: transparent;
-  white-space: nowrap;
-  z-index: 100;
+    letter-spacing: -0.02em;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: transparent;
+    white-space: nowrap;
+    z-index: 100;
   }
 
   .nav-menu-item:not(:last-child) {
@@ -117,10 +117,13 @@
     top: 0;
   }
 
-  .menu-close.active + .nav-menu-list {
-  display: block; 
-  
-}
+  .header-nav-menu .nav-menu-list {
+    display: none;
+  }
+
+  .header-nav-menu .nav-menu-list.active {
+    display: block;
+  }
 
   .order-button {
     display: flex;
