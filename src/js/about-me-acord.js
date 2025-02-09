@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const accordionItems = document.querySelectorAll('.item-about');
 
-  // Відкриваємо перший елемент списку за замовчуванням
   const firstItem = accordionItems[0];
   firstItem.classList.add('open');
 
@@ -12,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.addEventListener('click', function () {
       const isOpen = item.classList.contains('open');
 
-      // Тепер не закриваємо інші акордеони, а просто відкриваємо/закриваємо поточний
       if (isOpen) {
         item.classList.remove('open');
       } else {
