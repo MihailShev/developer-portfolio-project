@@ -1,2 +1,2 @@
-import "./src/js/hero.js"
-import "./js/menu"
+import './js/hero.js';
+import './js/menu';
