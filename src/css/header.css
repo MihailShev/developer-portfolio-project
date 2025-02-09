@@ -1,0 +1,139 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 100;
+  padding: 32px 16px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  height: 80px;
+}
+
+.logo-header {
+  display: flex;
+  gap: 8px;
+}
+.header-span {
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+/* -------Burger------ */
+.menu-toggle {
+  width: 30px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  z-index: 110;
+}
+
+.burger-line {
+  width: 30px;
+  height: 3px;
+  background: var(--text-color);
+  transition: transform 250ms ease-in-out;
+  position: absolute;
+}
+
+.burger-line:first-child {
+  transform: translateY(-6px);
+}
+
+.burger-line:last-child {
+  transform: translateY(6px);
+}
+
+.menu-toggle.active .burger-line:first-child {
+  transform: rotate(45deg);
+}
+
+.menu-toggle.active .burger-line:last-child {
+  transform: rotate(-45deg);
+}
+/* -------Burger------ */
+
+.header-nav-menu {
+  display: none;
+}
+.order-button {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    padding: 32px 32px;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .header-nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: transparent;
+    position: relative;
+  }
+
+  .nav-menu-list {
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: transparent;
+    white-space: nowrap;
+    z-index: 100;
+  }
+
+  .nav-menu-item:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .menu-close {
+    position: relative;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--text-color);
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    padding: 10px;
+    top: 0;
+  }
+
+  .header-nav-menu .nav-menu-list {
+    display: none;
+  }
+
+  .header-nav-menu .nav-menu-list.active {
+    display: block;
+  }
+
+  .order-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    width: 163px;
+    height: 55px;
+    background: var(--red-color);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+}
