@@ -75,6 +75,7 @@
   width: 36px;
   height: 36px;
   margin-bottom: 0;
+  transition: background-color 250ms ease-in;
 }
 
 .text-cv-about-container {

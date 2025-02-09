@@ -1,6 +1,3 @@
-import Accordion from 'accordion-js';
-
-new Accordion('.accordion-container');
 
 document.addEventListener('DOMContentLoaded', () => {
   const triggers = document.querySelectorAll('.ac-trigger');
