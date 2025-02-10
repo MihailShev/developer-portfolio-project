@@ -6,18 +6,24 @@ const btnOpenMenu = document.querySelector('.menu-toggle');
 
 function closeModal() {
   backdrop.classList.add('is-closed');
+
+  exitbtn.removeEventListener('click', closeModal);
+  backdrop.removeEventListener('click', closeModal);
+  document.removeEventListener('keydown', closeModalESC);
 }
 function openModal() {
   backdrop.classList.remove('is-closed');
 }
 
-exitbtn.addEventListener('click', closeModal);
-backdrop.addEventListener('click', closeModal);
-document.addEventListener('keydown', function (event) {
+const closeModalESC = event => {
   if (event.key === 'Escape') {
     closeModal();
   }
-});
+};
+
+exitbtn.addEventListener('click', closeModal);
+backdrop.addEventListener('click', closeModal);
+document.addEventListener('keydown', closeModalESC);
 
 btnOpenMenu.addEventListener('click', openModal);
 
