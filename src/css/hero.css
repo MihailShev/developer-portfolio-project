@@ -1,5 +1,5 @@
 .hero {
-  background-image: url('./img/hero/hero.png');
+  background-image: url('/img/hero/hero.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -60,7 +60,7 @@
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: url('./img/hero/hero@2x.png');
+    background-image: url('/img/hero/hero@2x.png');
     padding-top: 300px;
   }
 
