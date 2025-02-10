@@ -150,6 +150,8 @@
 
   .project-nav-button {
     padding: 18px;
+    width: 68px;
+    height: 68px;
   }
   .projects-arrow-icon {
     width: 32px;

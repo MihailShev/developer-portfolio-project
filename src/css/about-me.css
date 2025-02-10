@@ -164,8 +164,8 @@
   border: none;
 }
 
-.swiper-slide {
-  transition: border 250ms ease-in !important;
+.swiper-list .swiper-slide {
+  transition: border 250ms ease-in;
 }
 
 .swiper-arrow-svg {
