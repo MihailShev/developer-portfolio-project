@@ -1,19 +1,38 @@
 @keyframes marqueeLine {
-    from {
-        transform: translateX(-20%);
-    }
+  from {
+    transform: translateX(-20%);
+  }
 
-    to {
-        transform: translateX(-165%);
-    }
+  to {
+    transform: translateX(-165%);
+  }
 }
 
 @keyframes marqueeLineReverse {
-    from {
-        transform: translateX(-165%);
-    }
+  from {
+    transform: translateX(-165%);
+  }
 
-    to {
-        transform: translateX(-20%);
-    }
+  to {
+    transform: translateX(-20%);
+  }
+}
+
+@keyframes circle7124 {
+  0% {
+    top: 60px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+
+  40% {
+    height: 20px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+
+  100% {
+    top: 0%;
+  }
 }
