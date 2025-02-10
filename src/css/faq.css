@@ -22,9 +22,9 @@
 
 .list-item {
   background-color: inherit;
-  padding-top: 20px;
   border: solid transparent 1px;
   border-top-color: rgba(250, 250, 250, 0.2);
+  padding: 32px 32px 32px 0;
 }
 
 .list-item:last-of-type {
@@ -66,12 +66,10 @@
   line-height: 150%;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
-  transition: max-height 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: max-height 0.2s ease;
 }
-
-.list-item.open .list-item-text {
-  max-height: none;
-  padding-bottom: 20px;
+.list-item.opens .list-item-text {
+  max-height: 500px;
 }
 
 .list-item:hover .btn-faq,
@@ -84,7 +82,7 @@
   stroke: var(--color-black);
 }
 
-.list-item.open .btn-faq {
+.list-item.opens .btn-faq {
   transform: rotate(180deg);
   background-color: var(--text-color);
   transition: background-color 250ms ease-in, transform 250ms ease-in;
@@ -101,20 +99,12 @@
     height: 40px;
   }
 
-  .list-item {
-    padding-top: 32px;
-  }
-
   .faq-title-container {
     margin-bottom: 26px;
   }
-
-  .list-item.open .list-item-text {
-    padding-bottom: 24px;
-  }
 }
 /* Styles for Desktop devices */
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1440px) {
   .section-fag {
     padding-top: 164px;
     padding-bottom: 164px;
@@ -129,10 +119,6 @@
 
   .faq-title-container {
     margin-bottom: 42px;
-  }
-
-  .list-item.open .list-item-text {
-    padding-bottom: 26px;
   }
 
   .list-item {

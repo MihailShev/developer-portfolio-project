@@ -83,13 +83,13 @@
 }
 
 .text-cv-about-container {
-  max-height: 0;
   overflow: hidden;
-  transition: max-height 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 0;
+  transition: max-height 0.3s ease-in;
 }
 
 .item-about.open .text-cv-about-container {
-  max-height: none;
+  max-height: 400px;
 }
 
 .paragraph-about {
