@@ -1,6 +1,10 @@
 .section-about {
-  margin-top: 64px;
-  margin-bottom: 64px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.swiper {
+  margin: 0 !important;
 }
 
 .about-me-cont {
@@ -177,8 +181,8 @@
 
 @media screen and (min-width: 768px) {
   .section-about {
-    margin-top: 96px;
-    margin-bottom: 96px;
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
 
   .swiper-content-wrap {
@@ -211,6 +215,10 @@
     margin: 32px 0;
   }
 
+  .about-me-swiper-container {
+    margin-top: 64px;
+  }
+
   .about-me-skills {
     width: 600px;
     height: 200px;
@@ -224,8 +232,8 @@
 
 @media screen and (min-width: 1440px) {
   .section-about {
-    margin-top: 164px;
-    margin-bottom: 164px;
+    padding-top: 164px;
+    padding-bottom: 164px;
   }
 
   .swiper-content-wrap {
@@ -235,6 +243,10 @@
   .about-me-cont {
     flex-direction: row;
     column-gap: 16px;
+  }
+
+  .picture-about-me {
+    flex-shrink: 0;
   }
 
   .coutn-title {
@@ -255,11 +267,12 @@
   }
 
   .about-me-swiper-container {
-    margin-top: 64px;
+    padding: 0 32px;
+    margin-top: 96px;
   }
 
   .about-me-skills {
     width: 1200px;
-    height: 200px;
+    height: 210px;
   }
 }

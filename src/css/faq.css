@@ -1,7 +1,8 @@
 /* @import 'accordion-js/dist/accordion.min.css'; */
 
 .section-fag {
-  margin-top: 64px;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 
 .title-fag {
@@ -91,12 +92,8 @@
 
 @media only screen and (min-width: 768px) {
   .section-fag {
-    margin-top: 96px;
-  }
-
-  .container-fag {
-    max-width: 768px;
-    padding: 0 32px;
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
 
   .list-item .btn-faq {
@@ -119,12 +116,10 @@
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1280px) {
   .section-fag {
-    margin-top: 164px;
+    padding-top: 164px;
+    padding-bottom: 164px;
   }
 
-  .container-fag {
-    max-width: 1280px;
-  }
   .list {
     display: flex;
     flex-wrap: wrap;

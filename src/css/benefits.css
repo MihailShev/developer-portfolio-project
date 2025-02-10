@@ -101,5 +101,7 @@
 @media (min-width: 1440px) {
   .benefit-container {
     align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: row;
   }
 }

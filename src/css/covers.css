@@ -7,20 +7,12 @@
   background-size: cover;
   background-position: 50% 50%;
   overflow: hidden;
-  margin-top: 64px;
 }
 
 @media (min-resolution: 192dpi) {
   .covers-section {
     background-image: url('../img/covers/mobile-bg@2x.png');
   }
-}
-
-.covers-container {
-  position: absolute;
-  right: 0;
-  left: 0;
-  overflow: hidden;
 }
 
 .covers-list {
@@ -60,7 +52,6 @@
 /*======== TABLET STYLES ========*/
 @media (min-width: 768px) {
   .covers-section {
-    margin-top: 96px;
     height: 960px;
     background-image: url('../img/covers/tablet-bg.png');
   }
@@ -86,7 +77,6 @@
 /*======== DESKTOP STYLES ========*/
 @media (min-width: 1440px) {
   .covers-section {
-    margin-top: 164px;
     background-image: url('../img/covers/desktop-bg.png');
   }
 
