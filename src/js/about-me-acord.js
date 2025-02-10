@@ -1,23 +1,11 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const accordionItems = document.querySelectorAll('.item-about');
+import Accordion from 'accordion-js';
 
-  const firstItem = accordionItems[0];
-  firstItem.classList.add('open');
-
-  accordionItems.forEach(item => {
-    const btn = item.querySelector('.btn-about');
-    const content = item.querySelector('.text-cv-about-container');
-
-    btn.addEventListener('click', function () {
-      const isOpen = item.classList.contains('open');
-
-      if (isOpen) {
-        item.classList.remove('open');
-      } else {
-        item.classList.add('open');
-      }
-    });
-  });
+const accordion = new Accordion('.list-about', {
+  duration: 700,
+  elementClass: 'item-about',
+  triggerClass: 'btn-about',
+  panelClass: 'text-cv-about-container',
+  activeClass: 'open',
 });
 
 import Swiper from 'swiper';

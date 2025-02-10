@@ -1,19 +1,9 @@
+import Accordion from 'accordion-js';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const triggers = document.querySelectorAll('.ac-trigger');
-
-  triggers.forEach(trigger => {
-    const content = trigger.querySelector('.ac-panel');
-    const btn = trigger.querySelector('.btn-faq');
-    
-    trigger.addEventListener('click', function () {
-      const isOpen = trigger.classList.contains('open');
-
-      if (isOpen) {
-        trigger.classList.remove('open');
-      } else {
-        trigger.classList.add('open');
-      }
-    });
-  });
+const accordionFaq = new Accordion('.accordion-container', {
+  duration: 900,
+  elementClass: 'list-item',
+  triggerClass: 'btn-faq',
+  panelClass: 'list-item-text',
+  activeClass: 'opens',
 });
