@@ -1,13 +1,14 @@
-import Swiper from "swiper";
-import { Navigation } from "swiper/modules";
-import 'swiper/css';
-
-Swiper.use([Navigation]);
-const projectsSwiper = new Swiper(".projects-swiper", {
-    direction: "horizontal",
-    navigation: {
-        nextEl: ".projects-swiper-button-next",
-        prevEl: ".projects-swiper-button-prev"
-    },
-    spaceBetween: 100
+import Swiper from 'swiper/bundle';
+const projectsSwiper = new Swiper('.projects-swiper', {
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+  direction: 'horizontal',
+  navigation: {
+    nextEl: '.projects-swiper-button-next',
+    prevEl: '.projects-swiper-button-prev',
+  },
+  spaceBetween: 100,
 });
