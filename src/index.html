@@ -23,8 +23,20 @@
       href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="preload"
+      href="chrome-extension://cofdbpoegempjloogbagkncekinflcnj/build/content.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="chrome-extension://cofdbpoegempjloogbagkncekinflcnj/build/content.css"
+    /></noscript>
+
+    <script defer type="module" src="./main.js"></script>
     <link rel="stylesheet" href="./css/styles.css" />
-    <script defer type="module" src="./js/language.js"></script>
   </head>
   <body>
     <load src="./partials/modal.html" />
@@ -49,6 +61,5 @@
     <load src="./partials/work-together.html" />
 
     <load src="./partials/loader.html" />
-    <script defer type="module" src="./main.js"></script>
   </body>
 </html>
