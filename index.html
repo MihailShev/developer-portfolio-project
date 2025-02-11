@@ -26,7 +26,7 @@
     <script type="module" crossorigin src="/developer-portfolio-project/index.js"></script>
     <link rel="modulepreload" crossorigin href="/developer-portfolio-project/assets/vendor-BSUYBhEC.js">
     <link rel="stylesheet" crossorigin href="/developer-portfolio-project/assets/vendor-DHBATib1.css">
-    <link rel="stylesheet" crossorigin href="/developer-portfolio-project/assets/index-WeN1q7z-.css">
+    <link rel="stylesheet" crossorigin href="/developer-portfolio-project/assets/index-2uEvKgB_.css">
   </head>
   <body>
     <div class="modal-overlay is-closed">
@@ -52,9 +52,7 @@
       </ul>
     </nav>
 
-    <button type="button" class="modal-order-btn">
-      <a href="#work-together">Order the project</a>
-    </button>
+    <a class="modal-order-btn" href="#work-together">Order the project</a>
   </div>
 </div>
 
@@ -99,9 +97,7 @@
       </ul>
     </nav>
 
-    <button type="button">
-      <a class="order-link" href="#work-together">Order the project</a>
-    </button>
+    <a class="order-link" href="#work-together">Order the project</a>
   </div>
 </header>
 
@@ -109,14 +105,16 @@
       <section class="hero">
   <div class="hero-content container">
     <h1 class="title">
-HELLO. 
-I'M FULLSTACK DEVELOPER 
-LLOYD JEFFERSON</h1>
+      HELLO.<br class="desktop-only" />
+      I'M FULLSTACK DEVELOPER LLOYD JEFFERSON.
+    </h1>
     <ul class="contact">
       <li class="contact-list">
         <a
           href="https://www.instagram.com/goitclub/"
           aria-label="link to Instagram"
+          target="_blank"
+          rel="noreferrer, nofollow"
           >IG
         </a>
       </li>
@@ -125,12 +123,18 @@ LLOYD JEFFERSON</h1>
         <a
           href="https://www.facebook.com/goITclub/"
           aria-label="link to Facebook"
+          target="_blank"
+          rel="noreferrer, nofollow"
           >FB
         </a>
       </li>
 
       <li class="contact-list">
-        <a href="https://www.youtube.com/c/GoIT" aria-label="link to YouTube"
+        <a
+          href="https://www.youtube.com/c/GoIT"
+          aria-label="link to YouTube"
+          target="_blank"
+          rel="noreferrer, nofollow"
           >YT</a
         >
       </li>
@@ -139,6 +143,8 @@ LLOYD JEFFERSON</h1>
         <a
           href="https://github.com/MihailShev/developer-portfolio-project"
           aria-label="link to GitHub"
+          target="_blank"
+          rel="noreferrer, nofollow"
           >GH
         </a>
       </li>
@@ -429,6 +435,7 @@ LLOYD JEFFERSON</h1>
                 class="project-link"
                 href="https://github.com/MihailShev/developer-portfolio-project"
                 target="_blank"
+                rel="noreferrer, nofollow"
                 >See project</a
               >
             </div>
@@ -480,6 +487,7 @@ LLOYD JEFFERSON</h1>
                 class="project-link"
                 href="https://github.com/MihailShev/developer-portfolio-project"
                 target="_blank"
+                rel="noreferrer, nofollow"
                 >See project</a
               >
             </div>
@@ -531,6 +539,7 @@ LLOYD JEFFERSON</h1>
                 class="project-link"
                 href="https://github.com/MihailShev/developer-portfolio-project"
                 target="_blank"
+                rel="noreferrer, nofollow"
                 >See project</a
               >
             </div>
@@ -912,49 +921,80 @@ LLOYD JEFFERSON</h1>
 
     </main>
 
-    <footer id="work-together">
+    <footer class="footer" id="work-together">
   <div class="container container-work-together">
-
     <h2 class="work-t-title">
       <a class="work-t-title__link" href="index.html" aria-label="Site logo">
-        <img src="/developer-portfolio-project/assets/logotype-CDfeUaT2.svg" aria-hidden="true" alt="Site logo">
+        <img src="/developer-portfolio-project/assets/logotype-CDfeUaT2.svg" aria-hidden="true" alt="Site logo" />
       </a>
-      <span>Let`s&nbsp;</span><span class="work-t-title__accent">work</span><span>together</span>
+      <span>Let`s&nbsp;</span><span class="work-t-title__accent">work</span
+      ><span>together</span>
     </h2>
 
     <form class="work-t-form">
       <div class="work-t-form__wrapper-input">
-        <input class="work-t-form__input" type="email" id="email" name="email" placeholder="clients@gmail.com"
-          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" autocomplete="email" required
-          aria-label="input your email">
+        <input
+          class="work-t-form__input"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="clients@gmail.com"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          autocomplete="email"
+          required
+          aria-label="input your email"
+        />
         <label class="work-t-form__label" for="email">clients@gmail.com</label>
         <p class="work-t-form__input-valid">Success!</p>
         <p class="work-t-form__input-invalid">Invalid email, try again</p>
       </div>
 
       <div class="work-t-form__wrapper-input">
-        <input class="work-t-form__input" type="text" id="comment" name="comment" placeholder="comments" readonly
-          required aria-label="input your comments">
+        <input
+          class="work-t-form__input"
+          type="text"
+          id="comment"
+          name="comment"
+          placeholder="comments"
+          readonly
+          required
+          aria-label="input your comments"
+        />
         <label class="work-t-form__label" for="comment">comments</label>
       </div>
 
-      <button class="button work-t-form__button" type="submit" aria-label="Send form">Send</button>
+      <button
+        class="button work-t-form__button"
+        type="submit"
+        aria-label="Send form"
+      >
+        Send
+      </button>
     </form>
 
     <address class="work-t-address">
       <ul class="work-t-address-list">
         <li class="work-t-address-list__item">
-          <a class="work-t-address-list__link" href="mailto:lloydjefferson@gmail.com"
-            aria-label="send email">lloydjefferson@gmail.com</a>
+          <a
+            class="work-t-address-list__link"
+            href="mailto:lloydjefferson@gmail.com"
+            aria-label="send email"
+            >lloydjefferson@gmail.com</a
+          >
         </li>
         <li class="work-t-address-list__item">
-          <a class="work-t-address-list__link" href="tel:+3801111111111" aria-label="call by phone">+380 11 1111 11
-            11</a>
+          <a
+            class="work-t-address-list__link"
+            href="tel:+3801111111111"
+            aria-label="call by phone"
+            >+380 11 1111 11 11</a
+          >
         </li>
       </ul>
     </address>
   </div>
 </footer>
+
 
     <div class="loader-container-site">
   <div class="loader-site"></div>
