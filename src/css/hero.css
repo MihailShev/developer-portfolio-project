@@ -1,5 +1,5 @@
 .hero {
-  background-image: url(/img/Hero/hero.png);
+  background-image: url(/img/hero/hero-bg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -60,7 +60,7 @@
 
 @media screen and (min-resolution: 192dpi) {
   .hero {
-    background-image: url(/img/Hero/hero@2x.png);
+    background-image: url(/img/hero/hero-bg@2x.png);
   }
 }
 
