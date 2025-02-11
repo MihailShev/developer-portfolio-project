@@ -9,3 +9,5 @@ import './js/covers.js';
 import './js/reviews.js';
 import './js/ellipsis-input';
 import './js/wt-submit';
+import './js/languages2.js';
+import './js/darklight.js';
