@@ -72,6 +72,9 @@
   border-radius: 60px;
   transition: background-color 250ms ease-in;
   margin-bottom: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .modal-order-btn:hover,
 .modal-order-btn:focus {

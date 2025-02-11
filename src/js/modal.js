@@ -3,16 +3,18 @@ const exitbtn = document.querySelector('.close-btn');
 const backdrop = document.querySelector('.modal-overlay');
 const orderbtn = document.querySelector('.modal-order-btn');
 const btnOpenMenu = document.querySelector('.menu-toggle');
+const bodyElModal = document.querySelector('body');
 
 function closeModal() {
   backdrop.classList.add('is-closed');
-
-  exitbtn.removeEventListener('click', closeModal);
-  backdrop.removeEventListener('click', closeModal);
+  bodyElModal.style.overflow = 'auto';
   document.removeEventListener('keydown', closeModalESC);
 }
 function openModal() {
   backdrop.classList.remove('is-closed');
+
+  bodyElModal.style.overflow = 'hidden';
+  document.addEventListener('keydown', closeModalESC);
 }
 
 const closeModalESC = event => {
@@ -23,7 +25,6 @@ const closeModalESC = event => {
 
 exitbtn.addEventListener('click', closeModal);
 backdrop.addEventListener('click', closeModal);
-document.addEventListener('keydown', closeModalESC);
 
 btnOpenMenu.addEventListener('click', openModal);
 

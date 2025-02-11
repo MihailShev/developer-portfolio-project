@@ -1,7 +1,8 @@
+.footer {
+  padding-bottom: 32px;
+}
 
 .container-work-together {
-  padding-top: 32px;
-  padding-bottom: 32px;
   background-image: url(/img/work-together/mob/glass-effect-mob.png);
   background-repeat: no-repeat;
   background-size: 25% 100%;
@@ -243,9 +244,11 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .container-work-together {
-    padding-top: 80px;
+  .footer {
     padding-bottom: 169px;
+  }
+
+  .container-work-together {
     background-image: url(/img/work-together/tab/glass-effect-tab.png);
   }
 
@@ -320,7 +323,6 @@
 }
 
 @media only screen and (min-width: 1440px) {
-
   .container-work-together {
     padding-left: 196px;
     background-image: url(/img/work-together/desk/glass-effect-desk.png);

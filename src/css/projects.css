@@ -1,5 +1,5 @@
 .projects-section {
-  margin-top: 64px;
+  padding-top: 64px;
 }
 
 .projects-section-title {
@@ -123,7 +123,7 @@
 @media screen and (min-width: 768px) {
   .projects-section {
     padding: 0 0;
-    margin-top: 96px;
+    padding-top: 96px;
   }
 
   .project-description-wrapper {
@@ -173,7 +173,7 @@
 
 @media screen and (min-width: 1440px) {
   .projects-section {
-    margin-top: 164px;
+    padding-top: 164px;
   }
 
   .project-technologies {
