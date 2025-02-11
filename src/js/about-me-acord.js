@@ -2,6 +2,7 @@ import Accordion from 'accordion-js';
 
 const accordion = new Accordion('.list-about', {
   duration: 700,
+  showMultiple: true,
   openOnInit: [0],
   elementClass: 'item-about',
   triggerClass: 'btn-about',
