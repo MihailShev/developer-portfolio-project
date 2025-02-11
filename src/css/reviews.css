@@ -3,7 +3,7 @@
   padding-bottom: 64px;
 }
 .reviews-wrapper {
-  margin: 32px 0;
+  padding: 32px 0;
   overflow: hidden;
   display: flex;
   position: relative;
@@ -139,6 +139,7 @@
   overflow: visible;
   transition: opacity 200ms ease-in;
 }
+
 .loader-wrapper .loader {
   height: 352px;
   background-color: var(--background-color);
@@ -206,6 +207,7 @@
   }
   .loader-wrapper {
     width: 1376px;
+    bottom: -24px;
   }
 }
 
