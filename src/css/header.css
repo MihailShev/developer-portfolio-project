@@ -10,8 +10,6 @@
 
 .header-container {
   display: flex;
-  justify-content: space-between;
-  height: 80px;
 }
 
 .logo-header {
@@ -34,6 +32,7 @@
   gap: 6px;
   position: relative;
   z-index: 110;
+  margin-left: 143px;
 }
 
 .burger-line {
@@ -72,7 +71,9 @@
   .header {
     top: 20px;
   }
-
+  .header-container {
+    justify-content: space-between;
+  }
   .menu-toggle {
     display: none;
   }

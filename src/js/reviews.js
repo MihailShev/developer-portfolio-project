@@ -15,6 +15,11 @@ const createRewiews = async () => {
     reviewsList.innerHTML = cardTemplate;
     reviewsList.style.gap = 0;
     const swiper = new Swiper('.reviews-wrapper', {
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+      },
       initialSlide: 0,
       slidesPerView: 'auto',
       centeredSlides: false,
