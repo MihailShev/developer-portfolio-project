@@ -212,13 +212,14 @@
 }
 
 .modal-wt__btn {
+  font-size: 18px;
+  color: var(--text-color);
   position: absolute;
   top: 22px;
   right: 22px;
 }
-.modal-wt__icon {
-  stroke-width: 2px;
-  fill: var(--text-color);
+.modal-wt__btn::before {
+  content: '\2715';
 }
 .modal-wt__title {
   font-weight: 600;
