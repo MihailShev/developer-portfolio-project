@@ -184,6 +184,7 @@
   }
   .loader-wrapper {
     width: 704px;
+    bottom: 7px;
   }
 }
 
@@ -207,7 +208,7 @@
   }
   .loader-wrapper {
     width: 1376px;
-    bottom: -24px;
+    bottom: 8px;
   }
 }
 
