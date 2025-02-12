@@ -1,5 +1,0 @@
-const translations = {
-  en: {},
-
-  ua: {},
-};
