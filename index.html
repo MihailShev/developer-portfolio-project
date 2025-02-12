@@ -36,9 +36,9 @@
     /></noscript>
 
     <script type="module" crossorigin src="/developer-portfolio-project/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/developer-portfolio-project/assets/vendor-BSUYBhEC.js">
+    <link rel="modulepreload" crossorigin href="/developer-portfolio-project/assets/vendor-oEpPu-Yq.js">
     <link rel="stylesheet" crossorigin href="/developer-portfolio-project/assets/vendor-DHBATib1.css">
-    <link rel="stylesheet" crossorigin href="/developer-portfolio-project/assets/index-D2sR0mRj.css">
+    <link rel="stylesheet" crossorigin href="/developer-portfolio-project/assets/index-CvRbdt0w.css">
   </head>
   <body>
     <div class="modal-overlay is-closed">
@@ -48,23 +48,59 @@
         <use href="/developer-portfolio-project/assets/icons-CCsaY-HF.svg#icon-close"></use>
       </svg>
     </button>
-    <h2 class="modal-description">
+    <h2 class="modal-description" data-i18n="invisText">
       Thank you for your interest in cooperation!
     </h2>
 
     <nav>
       <ul class="modal-menu">
-        <li><a class="modal-menu-btn" href="#about">About me</a></li>
+        <li>
+          <a class="modal-menu-btn" href="#about" data-i18n="modalAbout"
+            >About me</a
+          >
+        </li>
 
-        <li><a class="modal-menu-btn" href="#benefits">Benefits</a></li>
+        <li>
+          <a class="modal-menu-btn" href="#benefits" data-i18n="modalBenef"
+            >Benefits</a
+          >
+        </li>
 
-        <li><a class="modal-menu-btn" href="#projects">Projects</a></li>
+        <li>
+          <a class="modal-menu-btn" href="#projects" data-i18n="modalProd"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a class="modal-menu-btn" href="" data-i18n="modalAI"
+            >AI assistant
+          </a>
+        </li>
 
-        <li><a class="modal-menu-btn" href="#faq">FAQ</a></li>
+        <li>
+          <a class="modal-menu-btn" href="#faq">FAQ</a>
+        </li>
       </ul>
     </nav>
+    <div class="icons-menu">
+      <div class="btn-row">
+        <a type="button" id="theme-toggles" class="btn-icon" data-theme-toggle>
+          <svg class="modal-icon" width="25" height="25">
+            <use href="../img/icons/icon-menu.svg#icon-moon-fill"></use>
+          </svg>
+        </a>
 
-    <a class="modal-order-btn" href="#work-together">Order the project</a>
+        <a type="button" class="btn-icon" data-lang="ua">
+          <svg class="modal-icon" width="35" height="65">
+            <use href="../img/icons/icon-menu.svg#icon-language"></use>
+          </svg>
+        </a>
+      </div>
+
+      <button type="button" class="modal-order-btn">
+        <a href="#work-together" data-i18n="modalBtn">Order the project</a>
+      </button>
+    </div>
   </div>
 </div>
 
@@ -88,19 +124,27 @@
     <!-- Навігація -->
 
     <nav class="header-nav-menu">
-      <button type="button" class="menu-close">Menu</button>
+      <button type="button" class="menu-close" data-i18n="headerMenu">
+        Menu
+      </button>
 
       <ul class="nav-menu-list" id="list-header">
         <li class="nav-menu-item">
-          <a class="menu-link-header" href="#about">About me</a>
+          <a class="menu-link-header" href="#about" data-i18n="modalAbout"
+            >About me</a
+          >
         </li>
 
         <li class="nav-menu-item">
-          <a class="menu-link-header" href="#benefits">Benefits</a>
+          <a class="menu-link-header" href="#benefits" data-i18n="modalBenef"
+            >Benefits</a
+          >
         </li>
 
         <li class="nav-menu-item">
-          <a class="menu-link-header" href="#projects">Projects</a>
+          <a class="menu-link-header" href="#projects" data-i18n="modalProd"
+            >Projects</a
+          >
         </li>
 
         <li class="nav-menu-item">
@@ -109,16 +153,18 @@
       </ul>
     </nav>
 
-    <a class="order-link" href="#work-together">Order the project</a>
+    <a class="order-link" href="#work-together" data-i18n="modalBtn"
+      >Order the project</a
+    >
   </div>
 </header>
 
     <main>
       <section class="hero">
   <div class="hero-content container">
-    <h1 class="title">
+    <h1 class="title" data-i18n="heroTitle">
       HELLO.<br class="desktop-only" />
-      I'M FULLSTACK DEVELOPER LLOYD JEFFERSON.
+      I'M FULLSTACK DEVELOPER LLOYD JEFFERSON
     </h1>
     <ul class="contact">
       <li class="contact-list">
@@ -126,7 +172,7 @@
           href="https://www.instagram.com/goitclub/"
           aria-label="link to Instagram"
           target="_blank"
-          rel="noreferrer, nofollow"
+          rel="noreferrer nofollow"
           >IG
         </a>
       </li>
@@ -136,7 +182,7 @@
           href="https://www.facebook.com/goITclub/"
           aria-label="link to Facebook"
           target="_blank"
-          rel="noreferrer, nofollow"
+          rel="noreferrer nofollow"
           >FB
         </a>
       </li>
@@ -146,7 +192,7 @@
           href="https://www.youtube.com/c/GoIT"
           aria-label="link to YouTube"
           target="_blank"
-          rel="noreferrer, nofollow"
+          rel="noreferrer nofollow"
           >YT</a
         >
       </li>
@@ -156,7 +202,7 @@
           href="https://github.com/MihailShev/developer-portfolio-project"
           aria-label="link to GitHub"
           target="_blank"
-          rel="noreferrer, nofollow"
+          rel="noreferrer nofollow"
           >GH
         </a>
       </li>
@@ -174,20 +220,49 @@
 </section>
 
 
+      <nav class="nav-block">
+  <input
+    type="checkbox"
+    href="#"
+    class="menu-open"
+    name="menu-open"
+    id="menu-open"
+  />
+  <label class="menu-open-button" for="menu-open">
+    <span class="lines line-1"></span>
+    <span class="lines line-2"></span>
+    <span class="lines line-3"></span>
+  </label>
+  <a href="#" id="theme-toggle" class="menu-item" data-theme-toggle>
+    <svg class="icon-menu" width="25" height="25">
+      <use href="/developer-portfolio-project/assets/icon-menu-aIGul2cN.svg#icon-moon-fill"></use></svg
+  ></a>
+  <a href="./communicat-IA.html" class="menu-item">
+    <svg class="icon-menu" width="35" height="65">
+      <use href="/developer-portfolio-project/assets/icon-menu-aIGul2cN.svg#icon-file-ai"></use></svg
+  ></a>
+  <a href="#" class="menu-item" data-lang="ua">
+    <svg class="icon-menu" width="35" height="65">
+      <use href="/developer-portfolio-project/assets/icon-menu-aIGul2cN.svg#icon-language"></use>
+    </svg>
+  </a>
+</nav>
+
+
       <section id="about" class="section-about">
-  <h2 class="visually-hidden">About me</h2>
   <div class="container">
     <div class="about-me-cont">
       <div class="coutn-title">
-        <p class="about-me-text">
+        <h2 class="visually-hidden" data-translate="modalAbout">About me</h2>
+        <p class="about-me-text" data-i18n="aboutText">
           I work with people all over the world to create impressive and
           <span class="accent-color-red">functional</span>
-          <span class="shadow-text">websites</span> that reflect each client's
-          unique personality.
+          <span class="shadow-text">websites</span>
+          that reflect each client's unique personality.
         </p>
       </div>
 
-      <picture class="picture-about-me"
+      <picture
         ><source
           srcset="/developer-portfolio-project/assets/lloyd-jefferson-desk-MMmKvc_I.webp 1x, /developer-portfolio-project/assets/lloyd-jefferson-desk@2x-J0JAiMZs.webp 2x"
           media="(min-width: 1440px)"
@@ -211,7 +286,7 @@
     <ul class="list-about">
       <li class="item-about">
         <div class="head-cv-about-container">
-          <h3 class="small-title-about ac-header">About me</h3>
+          <h3 class="small-title-about" data-i18n="modalAbout">About me</h3>
           <button
             type="button"
             class="btn-about"
@@ -225,7 +300,7 @@
         <div class="text-cv-about-container">
           <ul class="list-cv-about">
             <li>
-              <p class="paragraph-about">
+              <p class="paragraph-about" data-i18n="aboutBigText1">
                 I am Lloyd Jefferson, a talented programmer with extensive
                 expertise in software development. I have an understanding of
                 different programming languages ​​and technologies, always ready
@@ -236,7 +311,7 @@
               </p>
             </li>
             <li>
-              <p class="paragraph-about">
+              <p class="paragraph-about" data-i18n="aboutBigText2">
                 Able to work both independently and in a team. I can effectively
                 cooperate with colleagues, exchanging ideas and finding optimal
                 solutions. Professional maturity allows you to calmly cope with
@@ -255,7 +330,7 @@
 
       <li class="item-about">
         <div class="head-cv-about-container">
-          <h3 class="small-title-about">Role</h3>
+          <h3 class="small-title-about" data-i18n="aboutRole">Role</h3>
           <button
             type="button"
             class="btn-about"
@@ -278,7 +353,7 @@
 
       <li class="item-about">
         <div class="head-cv-about-container">
-          <h3 class="small-title-about">Education</h3>
+          <h3 class="small-title-about" data-i18n="aboutEdu">Education</h3>
           <button
             type="button"
             class="btn-about"
@@ -363,7 +438,9 @@
 
       <section id="benefits">
   <div class="container benefit-container">
-    <h2 class="benefit-title js-benefit-title">Benefits of working with me</h2>
+    <h2 class="benefit-title js-benefit-title" data-i18n="benTitle">
+      Benefits of working with me
+    </h2>
 
     <div class="benefit-content">
       <ul class="list-of-benefits js-list-of-benefits">
@@ -373,8 +450,10 @@
               <use href="/developer-portfolio-project/assets/icons-CCsaY-HF.svg#icon-user"></use>
             </svg>
           </div>
-          <h3 class="item-title js-item-title">Expertise</h3>
-          <p class="item-text js-item-text">
+          <h3 class="item-title js-item-title" data-i18n="benExpT">
+            Expertise
+          </h3>
+          <p class="item-text js-item-text" data-i18n="benExpP">
             As a highly experienced developer, I have deep knowledge of
             programming and website development.
           </p>
@@ -385,8 +464,10 @@
               <use href="/developer-portfolio-project/assets/icons-CCsaY-HF.svg#icon-message-chat"></use>
             </svg>
           </div>
-          <h3 class="item-title js-item-title">Communication</h3>
-          <p class="item-text js-item-text">
+          <h3 class="item-title js-item-title" data-i18n="benComT">
+            Communication
+          </h3>
+          <p class="item-text js-item-text" data-i18n="benComP">
             Understanding your needs and wants is my priority and I am always
             open to discussions and corrections.
           </p>
@@ -398,7 +479,7 @@
             </svg>
           </div>
           <h3 class="item-title js-item-title">Art</h3>
-          <p class="item-text js-item-text">
+          <p class="item-text js-item-text" data-i18n="benArtP">
             Thanks to my creative nature, I am ready to accept challenges and
             help you bring your ideas to life.
           </p>
@@ -409,15 +490,20 @@
               <use href="/developer-portfolio-project/assets/icons-CCsaY-HF.svg#icon-hourglass"></use>
             </svg>
           </div>
-          <h3 class="item-title js-item-title">Urgent execution</h3>
-          <p class="item-text js-item-text">
+          <h3 class="item-title js-item-title" data-i18n="benUrgT">
+            Urgent execution
+          </h3>
+          <p class="item-text js-item-text" data-i18n="benUrgP">
             I understand how important time is to you. Ready to work quickly and
             efficiently, without reducing the quality of work.
           </p>
         </li>
       </ul>
 
-      <a class="scroll-btn js-scroll-btn" href="#work-together"
+      <a
+        class="scroll-btn js-scroll-btn"
+        href="#work-together"
+        data-i18n="modalBtn"
         >Order the project</a
       >
     </div>
@@ -427,7 +513,7 @@
 
       <section class="projects-section" id="projects">
   <div class="container">
-    <h2 class="projects-section-title">Projects</h2>
+    <h2 class="projects-section-title" data-i18n="modalProd">Projects</h2>
     <div class="projects-swiper">
       <ul class="swiper-wrapper projects-list">
         <li class="swiper-slide">
@@ -439,7 +525,7 @@
                 <li class="project-technology"><p>#node.js</p></li>
                 <li class="project-technology"><p>#git</p></li>
               </ul>
-              <h3 class="project-title">
+              <h3 class="project-title" data-i18n="prodjectTitle">
                 Programming accross borders: ideas, technologies, innovations
               </h3>
               <a
@@ -447,7 +533,8 @@
                 class="project-link"
                 href="https://github.com/MihailShev/developer-portfolio-project"
                 target="_blank"
-                rel="noreferrer, nofollow"
+                data-i18n="prodjectBtn"
+                rel="noreferrer nofollow"
                 >See project</a
               >
             </div>
@@ -491,7 +578,7 @@
                 <li class="project-technology"><p>#node.js</p></li>
                 <li class="project-technology"><p>#git</p></li>
               </ul>
-              <h3 class="project-title">
+              <h3 class="project-title" data-i18n="prodjectTitle">
                 Programming accross borders: ideas, technologies, innovations
               </h3>
               <a
@@ -499,7 +586,8 @@
                 class="project-link"
                 href="https://github.com/MihailShev/developer-portfolio-project"
                 target="_blank"
-                rel="noreferrer, nofollow"
+                data-i18n="prodjectBtn"
+                rel="noreferrer nofollow"
                 >See project</a
               >
             </div>
@@ -543,7 +631,7 @@
                 <li class="project-technology"><p>#node.js</p></li>
                 <li class="project-technology"><p>#git</p></li>
               </ul>
-              <h3 class="project-title">
+              <h3 class="project-title" data-i18n="prodjectTitle">
                 Programming accross borders: ideas, technologies, innovations
               </h3>
               <a
@@ -551,7 +639,8 @@
                 class="project-link"
                 href="https://github.com/MihailShev/developer-portfolio-project"
                 target="_blank"
-                rel="noreferrer, nofollow"
+                data-i18n="prodjectBtn"
+                rel="noreferrer nofollow"
                 >See project</a
               >
             </div>
@@ -619,7 +708,7 @@
     <ul class="list accordion-container">
       <li class="list-item">
         <div class="faq-title-container">
-          <h3 class="list-item-title">
+          <h3 class="list-item-title" data-i18n="faqTitle1">
             What programming languages ​​are most often used in your project?
           </h3>
           <button class="btn-faq" type="button" aria-label="open-close-button">
@@ -628,16 +717,16 @@
             </svg>
           </button>
         </div>
-        <p class="list-item-text">
+        <p class="list-item-text" data-i18n="faqPar1">
           In the field of we development, there are various technologies and
           programming languages. Typically, this includes a combination of
           frontend (client side) and backend (server side) languages.
         </p>
       </li>
 
-      <li class="list-item ac ac-trigger">
+      <li class="list-item">
         <div class="faq-title-container">
-          <h3 class="list-item-title ac-header">
+          <h3 class="list-item-title ac-header" data-i18n="faqTitle2">
             What are the deadlines for the project?
           </h3>
           <button class="btn-faq" type="button" aria-label="open-close-button">
@@ -646,7 +735,7 @@
             </svg>
           </button>
         </div>
-        <p class="list-item-text ac-panel">
+        <p class="list-item-text" data-i18n="faqPar2">
           The terms of project implementation depend to a large extent on a
           number of factors, such as the scope of the project, its complexity,
           and the availability of resources. Determining exact deadlines is a
@@ -655,9 +744,9 @@
         </p>
       </li>
 
-      <li class="list-item ac ac-trigger">
+      <li class="list-item">
         <div class="faq-title-container">
-          <h3 class="list-item-title ac-header">
+          <h3 class="list-item-title" data-i18n="faqTitle3">
             What payment methods do you accept?
           </h3>
           <button class="btn-faq" type="button" aria-label="open-close-button">
@@ -666,32 +755,34 @@
             </svg>
           </button>
         </div>
-        <p class="list-item-text ac-panel">
+        <p class="list-item-text" data-i18n="faqPar3">
           Payment through credit and debit cards such as Visa, MasterCard,
           specialized electronic payment systems such as PayPal, as well as
           payments in cryptocurrencies such as Bitcoin, Ethereum and others.
         </p>
       </li>
 
-      <li class="list-item ac ac-trigger">
+      <li class="list-item">
         <div class="faq-title-container">
-          <h3 class="list-item-title ac-header">How can I contact you?</h3>
+          <h3 class="list-item-title" data-i18n="faqTitle4">
+            How can I contact you?
+          </h3>
           <button class="btn-faq" type="button" aria-label="open-close-button">
             <svg class="list-item-icon icon-down" width="40" height="40">
               <use href="/developer-portfolio-project/assets/icons-CCsaY-HF.svg#icon-arrow-down"></use>
             </svg>
           </button>
         </div>
-        <p class="list-item-text ac-panel">
+        <p class="list-item-text" data-i18n="faqPar4">
           In the field of web development, there are various technologies and
           programming languages. Typically, this includes a combination of
           frontend (client side) and backend (server side) languages.
         </p>
       </li>
 
-      <li class="list-item ac ac-trigger">
+      <li class="list-item">
         <div class="faq-title-container">
-          <h3 class="list-item-title ac-header">
+          <h3 class="list-item-title" data-i18n="faqTitle5">
             Do you provide advice or support?
           </h3>
           <button class="btn-faq" type="button" aria-label="open-close-button">
@@ -700,7 +791,7 @@
             </svg>
           </button>
         </div>
-        <p class="list-item-text ac-panel">
+        <p class="list-item-text" data-i18n="faqPar5">
           The terms of project implementation depend to a large extent on a
           number of factors, such as the scope of the project, its complexity,
           and the availability of resources. Determining exact deadlines is a
@@ -709,9 +800,9 @@
         </p>
       </li>
 
-      <li class="list-item ac ac-trigger">
+      <li class="list-item">
         <div class="faq-title-container">
-          <h3 class="list-item-title ac-header">
+          <h3 class="list-item-title" data-i18n="faqTitle6">
             What does the process of developing a software product look like
             from idea to implementation?
           </h3>
@@ -721,7 +812,7 @@
             </svg>
           </button>
         </div>
-        <p class="list-item-text ac-panel">
+        <p class="list-item-text" data-i18n="faqPar6">
           Payment through credit and debit cards such as Visa, MasterCard,
           specialized electronic payment systems such as PayPal, as well as
           payments in cryptocurrencies such as Bitcoin, Ethereum and others.
@@ -863,7 +954,7 @@
 
       <section class="reviews" id="reviews">
   <div class="container">
-    <h2 class="reviews-title">Reviews</h2>
+    <h2 class="reviews-title" data-i18n="review">Reviews</h2>
     <div class="reviews-wrapper">
       <div class="loader-wrapper">
         <div class="loader reviews-item tablet">
@@ -957,8 +1048,12 @@
           aria-label="input your email"
         />
         <label class="work-t-form__label" for="email">clients@gmail.com</label>
-        <p class="work-t-form__input-valid">Success!</p>
-        <p class="work-t-form__input-invalid">Invalid email, try again</p>
+        <p class="work-t-form__input-valid" data-translate="workvalidTrue">
+          Success!
+        </p>
+        <p class="work-t-form__input-invalid" data-translate="workvalidfalse">
+          Invalid email, try again
+        </p>
       </div>
 
       <div class="work-t-form__wrapper-input">
@@ -972,13 +1067,19 @@
           required
           aria-label="input your comments"
         />
-        <label class="work-t-form__label" for="comment">comments</label>
+        <label
+          class="work-t-form__label"
+          for="comment"
+          data-translate="workComent"
+          >comments</label
+        >
       </div>
 
       <button
         class="button work-t-form__button"
         type="submit"
         aria-label="Send form"
+        data-i18n="workBtn"
       >
         Send
       </button>
