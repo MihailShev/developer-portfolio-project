@@ -10,7 +10,7 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: var(--shadow-text-color);
+  color: var(--acord-title-text);
   align-self: flex-start;
 }
 
@@ -33,7 +33,7 @@
 .item-of-benefit {
   border-radius: 20px;
   padding: 24px;
-  background: #242527;
+  background: var(--section-bg);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -74,6 +74,8 @@
   border-radius: 60px;
   padding: 18px 36px;
   transition: border 250ms ease-in;
+  background-color: var(--section-bg);
+  color: var(--textIn-dark-bg);
 }
 
 .scroll-btn:hover,

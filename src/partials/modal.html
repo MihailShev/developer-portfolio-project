@@ -5,22 +5,58 @@
         <use href="/img/icons/icons.svg#icon-close"></use>
       </svg>
     </button>
-    <h2 class="modal-description">
+    <h2 class="modal-description" data-i18n="invisText">
       Thank you for your interest in cooperation!
     </h2>
 
     <nav>
       <ul class="modal-menu">
-        <li><a class="modal-menu-btn" href="#about">About me</a></li>
+        <li>
+          <a class="modal-menu-btn" href="#about" data-i18n="modalAbout"
+            >About me</a
+          >
+        </li>
 
-        <li><a class="modal-menu-btn" href="#benefits">Benefits</a></li>
+        <li>
+          <a class="modal-menu-btn" href="#benefits" data-i18n="modalBenef"
+            >Benefits</a
+          >
+        </li>
 
-        <li><a class="modal-menu-btn" href="#projects">Projects</a></li>
+        <li>
+          <a class="modal-menu-btn" href="#projects" data-i18n="modalProd"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a class="modal-menu-btn" href="" data-i18n="modalAI"
+            >AI assistant
+          </a>
+        </li>
 
-        <li><a class="modal-menu-btn" href="#faq">FAQ</a></li>
+        <li>
+          <a class="modal-menu-btn" href="#faq">FAQ</a>
+        </li>
       </ul>
     </nav>
+    <div class="icons-menu">
+      <div class="btn-row">
+        <a type="button" id="theme-toggles" class="btn-icon" data-theme-toggle>
+          <svg class="modal-icon" width="25" height="25">
+            <use href="../img/icons/icon-menu.svg#icon-moon-fill"></use>
+          </svg>
+        </a>
 
-    <a class="modal-order-btn" href="#work-together">Order the project</a>
+        <a type="button" class="btn-icon" data-lang="ua">
+          <svg class="modal-icon" width="35" height="65">
+            <use href="../img/icons/icon-menu.svg#icon-language"></use>
+          </svg>
+        </a>
+      </div>
+
+      <button type="button" class="modal-order-btn">
+        <a href="#work-together" data-i18n="modalBtn">Order the project</a>
+      </button>
+    </div>
   </div>
 </div>

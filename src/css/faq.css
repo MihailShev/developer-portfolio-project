@@ -7,7 +7,7 @@
   line-height: 150%;
   font-size: 16px;
   letter-spacing: -0.02em;
-  color: rgba(250, 250, 250, 0.4);
+  color: var(--acord-title-text);
   margin-bottom: 32px;
 }
 
@@ -22,12 +22,12 @@
 .list-item {
   background-color: inherit;
   border: solid transparent 1px;
-  border-top-color: rgba(250, 250, 250, 0.2);
-  padding: 32px 32px 32px 0;
+  border-top-color: var(--text-color);
+  padding: 32px 32px 42px 0;
 }
 
 .list-item:last-of-type {
-  border-bottom-color: rgba(250, 250, 250, 0.2);
+  border-bottom-color: var(--text-color);
 }
 
 .list-item .list-item-title {
@@ -64,7 +64,7 @@
   font-weight: 500;
   line-height: 150%;
   letter-spacing: -0.02em;
-  color: rgba(250, 250, 250, 0.6);
+  color: var(--acord-title-text);
 }
 .list-item.opens .list-item-text {
   max-height: 500px;
@@ -77,12 +77,11 @@
 
 .list-item:hover .list-item-icon,
 .list-item:focus .list-item-icon {
-  stroke: var(--color-black);
+  fill: var(--background-color);
 }
 
 .list-item.opens .btn-faq {
   transform: rotate(180deg);
-  background-color: var(--text-color);
   transition: background-color 250ms ease-in, transform 250ms ease-in;
 }
 
@@ -125,13 +124,13 @@
     padding-left: 0;
   }
   .list-item:nth-child(odd) {
-    border-right: 1px solid rgba(250, 250, 250, 0.2);
+    border-right: 1px solid var(--text-color);
     padding-right: 32px;
   }
 
   .list-item:last-child,
   .list-item:nth-last-child(2) {
-    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+    border-bottom: 1px solid var(--text-color);
   }
 
   .list-item:nth-child(even) {

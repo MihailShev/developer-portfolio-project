@@ -15,7 +15,7 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  color: var(--shadow-text-color);
+  color: var(--acord-title-text);
 }
 .reviews-list {
   display: flex;
@@ -52,7 +52,7 @@
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  color: rgba(250, 250, 250, 0.6);
+  color: var(--acord-title-text);
 }
 .reviews-buttons {
   display: flex;
@@ -102,7 +102,7 @@
 .swiper-button-disabled .rev-next,
 .disable-btn .rev-prev,
 .disable-btn .rev-next {
-  fill: #3b3b3b;
+  fill: #8888;
 }
 .reviews-item.error-item:hover {
   border: 1px solid rgba(250, 250, 250, 0.2);

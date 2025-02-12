@@ -54,6 +54,7 @@
   margin-bottom: 12px;
   transition: color 250ms ease-in;
   text-decoration: underline;
+  color: var(--textIn-dark-bg);
 }
 .modal-menu-btn:hover,
 .modal-menu-btn:focus {
@@ -68,7 +69,7 @@
   width: 164px;
   height: 45px;
   background-color: #ed3b44;
-  color: #fafafa;
+  color: var(--textIn-dark-bg);
   border-radius: 60px;
   transition: background-color 250ms ease-in;
   margin-bottom: 64px;
@@ -79,6 +80,41 @@
 .modal-order-btn:hover,
 .modal-order-btn:focus {
   background-color: #c92830;
+}
+
+.icons-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  fill: var(--text-color);
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: var(--color-plus-menu);
+  border-radius: 100%;
+  position: relative;
+}
+
+.btn-row {
+  display: flex;
+  gap: 10px; /* Відстань між кнопками */
+}
+
+.modal-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.js-lang-toggle {
+  width: 40px;
+  height: 40px;
+  position: absolute;
 }
 
 @media only screen and (min-width: 768px) {
