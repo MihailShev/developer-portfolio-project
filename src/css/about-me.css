@@ -17,7 +17,7 @@
 .coutn-title {
   padding: 32px;
   padding-bottom: 272px;
-  background: #242527;
+  background: var(--section-bg);
   border-radius: 24px;
 }
 
@@ -34,7 +34,7 @@
 
 .item-about {
   fill: var(--text-color);
-  border-bottom: 1px solid var(--shadow-text-color);
+  border-bottom: 1px solid var(--text-color);
 }
 
 .head-cv-about-container {
@@ -49,7 +49,7 @@
   font-weight: 600;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: var(--shadow-text-color);
+  color: var(--acord-title-text);
 }
 
 .head-cv-about-container {
@@ -65,7 +65,7 @@
   font-weight: 600;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: var(--shadow-text-color);
+  color: var(--acord-title-text);
 }
 
 .btn-about {
@@ -88,7 +88,7 @@
 }
 
 .item-about.open .text-cv-about-container {
-  max-height: 400px;
+  max-height: 480px;
 }
 
 .paragraph-about {
@@ -168,7 +168,7 @@
 }
 
 .swiper-arrow-svg {
-  fill: var(--shadow-text-color);
+  fill: var(--acord-title-text);
 }
 
 .swipe-text {
@@ -250,6 +250,7 @@
 
   .coutn-title {
     max-width: 50%;
+    padding-bottom: 0;
   }
 
   .about-me-cont {

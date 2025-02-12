@@ -20,6 +20,8 @@
     "accordion-js": "^3.4.0",
     "axios": "^1.7.9",
     "dotenv": "^16.4.7",
+    "i18next": "^24.2.2",
+    "i18next-browser-languagedetector": "^8.0.2",
     "izitoast": "^1.4.0",
     "swiper": "^11.2.2",
     "vite-plugin-full-reload": "^1.2.0",

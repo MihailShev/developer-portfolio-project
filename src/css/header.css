@@ -20,6 +20,7 @@
   font-weight: 500;
   font-size: 20px;
   letter-spacing: -0.02em;
+  color: var(--textIn-dark-bg);
 }
 /* -------Burger------ */
 .menu-toggle {
@@ -38,7 +39,7 @@
 .burger-line {
   width: 30px;
   height: 3px;
-  background: var(--text-color);
+  background: var(--textIn-dark-bg);
   transition: transform 250ms ease-in-out;
   position: absolute;
 }
@@ -86,6 +87,10 @@
     position: relative;
   }
 
+  .menu-link-header {
+    color: var(--textIn-dark-bg);
+  }
+
   .nav-menu-list {
     font-weight: 500;
     letter-spacing: -0.02em;
@@ -110,7 +115,7 @@
     position: relative;
     font-weight: 500;
     letter-spacing: -0.02em;
-    color: var(--text-color);
+    color: var(--textIn-dark-bg);
     text-decoration: underline;
     text-decoration-skip-ink: none;
     padding: 10px;
@@ -132,7 +137,7 @@
     border-radius: 60px;
     width: 163px;
     height: 55px;
-    color: var(--text-color);
+    color: var(--textIn-dark-bg);
     background-color: var(--red-color);
     font-weight: 500;
     letter-spacing: -0.02em;

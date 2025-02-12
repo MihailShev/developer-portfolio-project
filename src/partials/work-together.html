@@ -1,8 +1,8 @@
-<footer class="footer" id="work-together">
+<footer id="work-together">
   <div class="container container-work-together">
     <h2 class="work-t-title">
       <a class="work-t-title__link" href="index.html" aria-label="Site logo">
-        <img src="./img/logo/logotype.svg" aria-hidden="true" alt="Site logo" />
+        <img src="/img/logo/logotype.svg" aria-hidden="true" alt="Site logo" />
       </a>
       <span>Let`s&nbsp;</span><span class="work-t-title__accent">work</span
       ><span>together</span>
@@ -22,8 +22,12 @@
           aria-label="input your email"
         />
         <label class="work-t-form__label" for="email">clients@gmail.com</label>
-        <p class="work-t-form__input-valid">Success!</p>
-        <p class="work-t-form__input-invalid">Invalid email, try again</p>
+        <p class="work-t-form__input-valid" data-translate="workvalidTrue">
+          Success!
+        </p>
+        <p class="work-t-form__input-invalid" data-translate="workvalidfalse">
+          Invalid email, try again
+        </p>
       </div>
 
       <div class="work-t-form__wrapper-input">
@@ -37,13 +41,19 @@
           required
           aria-label="input your comments"
         />
-        <label class="work-t-form__label" for="comment">comments</label>
+        <label
+          class="work-t-form__label"
+          for="comment"
+          data-translate="workComent"
+          >comments</label
+        >
       </div>
 
       <button
         class="button work-t-form__button"
         type="submit"
         aria-label="Send form"
+        data-i18n="workBtn"
       >
         Send
       </button>
