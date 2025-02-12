@@ -27,5 +27,3 @@ exitbtn.addEventListener('click', closeModal);
 backdrop.addEventListener('click', closeModal);
 
 btnOpenMenu.addEventListener('click', openModal);
-
-orderbtn.addEventListener('click', function () {});

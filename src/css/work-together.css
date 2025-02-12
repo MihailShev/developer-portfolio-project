@@ -243,11 +243,12 @@
 
 @media only screen and (min-width: 768px) {
   .footer {
-    padding-bottom: 169px;
+    margin-bottom: 80px;
   }
 
   .container-work-together {
     background-image: url(/img/work-together/tab/glass-effect-tab.png);
+    padding-top: 80px;
   }
 
   .work-t-title {

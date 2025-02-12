@@ -23,7 +23,7 @@
   background-color: inherit;
   border: solid transparent 1px;
   border-top-color: var(--text-color);
-  padding: 32px 32px 32px 0;
+  padding: 32px 32px 42px 0;
 }
 
 .list-item:last-of-type {
