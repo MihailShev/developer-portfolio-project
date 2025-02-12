@@ -99,7 +99,7 @@
   transform: translate(0, -10px);
   font-size: 12px;
   font-weight: 300;
-  color: rgba(250, 250, 250, 0.2);
+  color: var(--acord-title-text);
 }
 
 .work-t-form__input:not(:placeholder-shown):valid,

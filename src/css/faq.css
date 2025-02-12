@@ -43,7 +43,7 @@
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  border: 1px solid var(--shadow-text-color);
+  border: 1px solid var(--acord-title-text);
   border-radius: 100px;
   padding: 9px;
   width: 36px;
