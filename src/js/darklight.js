@@ -1,4 +1,4 @@
-import iconMenu from './img/icons/icon-menu.svg';
+import iconMenu from '../img/icons/icon-menu.svg';
 let styleMode = localStorage.getItem('styleMode');
 
 const themeToggles = document.querySelectorAll('[data-theme-toggle]');
