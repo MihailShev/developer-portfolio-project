@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 pull-list-link.text
+
+.env
