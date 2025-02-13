@@ -46,15 +46,19 @@ export const answer = text =>
 
           <div class="inner-message-svg">
             <button class="btn-copy" type="button">
-              <svg class="" width="17" height="17">
-                <use href="./img/icons/icons-chat.svg#icon-copy"></use>
-              </svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="rgba(250, 250, 250, 0.2)" stroke="rgba(250, 250, 250, 0.2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="9" y="9" width="11" height="11" rx="2" ry="2"></rect>
+  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+</svg>
             </button>
 
             <button class="btn-speech" type="button">
-              <svg class="" width="17" height="17">
-                <use href="./img/icons/icons-chat.svg#icon-volume"></use>
-              </svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 24 24" fill="rgba(250, 250, 250, 0.2)" stroke="rgba(250, 250, 250, 0.2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <polygon points="3 9 9 3 9 21 3 15"></polygon>
+  <path d="M17 8a5 5 0 0 1 0 8"></path>
+  <path d="M21 5a9 9 0 0 1 0 14"></path>
+</svg>
+
             </button>
 
           <tt class="time-ai">${getTime()}</tt>

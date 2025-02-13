@@ -1,3 +1,4 @@
+import iconMenu from './img/icons/icon-menu.svg';
 let styleMode = localStorage.getItem('styleMode');
 
 const themeToggles = document.querySelectorAll('[data-theme-toggle]');
@@ -8,7 +9,7 @@ const enableDarkStyle = () => {
 
   themeToggles.forEach(toggle => {
     const iconUse = toggle.querySelector('use');
-    iconUse.setAttribute('href', '../img/icons/icon-menu.svg#icon-moon-fill');
+    iconUse.setAttribute('href', iconMenu + '#icon-moon-fill');
   });
 };
 
@@ -18,7 +19,7 @@ const disableDarkStyle = () => {
 
   themeToggles.forEach(toggle => {
     const iconUse = toggle.querySelector('use');
-    iconUse.setAttribute('href', '../img/icons/icon-menu.svg#icon-sun');
+    iconUse.setAttribute('href', iconMenu + '#icon-sun');
   });
 };
 
