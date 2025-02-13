@@ -1,5 +1,10 @@
 import { requesr, answer } from './render-function.js';
 import axios from 'axios';
+const chat = document.querySelector('.message-container');
+const inp = document.querySelector('.js-user-message-inp');
+const divElBtnForm = document.querySelector('.inner-form-svg');
+const sendBtn = document.querySelector('.js-user-send-btn');
+const loaderChat = document.querySelector('.loader-chat-wrap');
 
 const loader = document.querySelector('.loader-container-site');
 
@@ -19,12 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
   viewLoader();
 });
 
-const chat = document.querySelector('.message-container');
-const inp = document.querySelector('.js-user-message-inp');
-const divElBtnForm = document.querySelector('.inner-form-svg');
-const sendBtn = document.querySelector('.js-user-send-btn');
-const loaderChat = document.querySelector('.loader-chat-wrap');
-
 const hideLoaderChat = () => {
   loaderChat.style.display = 'none';
 };
@@ -32,14 +31,40 @@ const hideLoaderChat = () => {
 const viewLoaderChat = () => {
   loaderChat.style.display = 'block';
 };
+let speechSynthesisInstance = window.speechSynthesis;
+let textToTalk = null;
 
-// Talk Messages
-const talkMessage = text => {
-  const textToTalk = new SpeechSynthesisUtterance(text);
-  speechSynthesis.speak(textToTalk);
+// stop speech
+const stopSpeechOnUnload = () => {
+  if (speechSynthesisInstance.speaking || speechSynthesisInstance.pending) {
+    speechSynthesisInstance.cancel();
+  }
 };
 
-// Copy Text Messages
+// men or girl speech
+const getPreferredVoice = () => {
+  const voices = speechSynthesisInstance.getVoices();
+  return voices[1] || voices[0];
+};
+
+// await speech
+speechSynthesisInstance.onvoiceschanged = () => {
+  console.log('Доступные голоса:', speechSynthesisInstance.getVoices());
+};
+
+// talkMessage
+const talkMessage = text => {
+  if (speechSynthesisInstance.speaking || speechSynthesisInstance.pending) {
+    speechSynthesisInstance.cancel();
+  }
+
+  textToTalk = new SpeechSynthesisUtterance(text);
+  textToTalk.voice = getPreferredVoice();
+
+  speechSynthesisInstance.speak(textToTalk);
+};
+
+// copy
 const copyToText = async text => {
   try {
     await navigator.clipboard.writeText(text);
@@ -47,6 +72,12 @@ const copyToText = async text => {
     console.log(err);
   }
 };
+
+// stop speech
+window.addEventListener('beforeunload', stopSpeechOnUnload);
+window.addEventListener('visibilitychange', () => {
+  if (document.hidden) stopSpeechOnUnload();
+});
 
 // Value Prompt
 let userMessageInput = '';
@@ -85,7 +116,7 @@ const handlerBtnSendTalk = e => {
 };
 divElBtnForm.addEventListener('click', handlerBtnSendTalk);
 
-// Btn Chat "Cpoy" And "Speech"
+// **Обработчик кликов для кнопок "Говорить" и "Копировать"**
 const talkCopyEvent = e => {
   const btn = e.target.closest('button');
   if (!btn) return;
@@ -97,16 +128,16 @@ const talkCopyEvent = e => {
 
   const messageText = messageElement.textContent.trim();
 
-  // Btn Speech
   if (btn.classList.contains('btn-speech')) {
     talkMessage(messageText);
   }
 
-  // Btn Copy
   if (btn.classList.contains('btn-copy')) {
     copyToText(messageText);
   }
 };
+
+// Навешиваем обработчик событий на чат
 chat.addEventListener('click', talkCopyEvent);
 
 // Setting Spech Lang
