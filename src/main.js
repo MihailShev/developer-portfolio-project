@@ -1,4 +1,5 @@
 import './js/loader.js';
+import './js/chash-site.js';
 import './js/menu.js';
 import './js/modal.js';
 // import './js/hero.js';

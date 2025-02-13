@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiByeD0iMTAiIGZpbGw9IiMxQzFEMjAiLz4KPHBhdGggZD0iTTE4LjY0ODQgMzEuMTk1M0MxNy44MjE2IDMxLjE5NTMgMTcuMDc5NCAzMS4wNDg4IDE2LjQyMTkgMzAuNzU1OUMxNS43NjQzIDMwLjQ1NjQgMTUuMjQzNSAzMC4wMjAyIDE0Ljg1OTQgMjkuNDQ3M0MxNC40NzUzIDI4Ljg3NDMgMTQuMjgzMiAyOC4xNzc3IDE0LjI4MzIgMjcuMzU3NFYyNy4wNzQySDE2LjQ2MDlWMjcuMzU3NEMxNi40NjA5IDI3Ljc1NDYgMTYuNTUyMSAyOC4xMDI5IDE2LjczNDQgMjguNDAyM0MxNi45MjMyIDI4LjcwMTggMTcuMTgwMyAyOC45MzI5IDE3LjUwNTkgMjkuMDk1N0MxNy44Mzc5IDI5LjI1MiAxOC4yMTg4IDI5LjMzMDEgMTguNjQ4NCAyOS4zMzAxQzE5LjExMDcgMjkuMzMwMSAxOS41MDQ2IDI5LjIzMjQgMTkuODMwMSAyOS4wMzcxQzIwLjE1NTYgMjguODQxOCAyMC40MDMgMjguNTU1MyAyMC41NzIzIDI4LjE3NzdDMjAuNzQxNSAyNy43OTM2IDIwLjgyNjIgMjcuMzI0OSAyMC44MjYyIDI2Ljc3MTVWMTYuNDQ5MkgyMy4wMDM5VjI2Ljc3MTVDMjMuMDAzOSAyNy43MDI1IDIyLjgyNDkgMjguNSAyMi40NjY4IDI5LjE2NDFDMjIuMTE1MiAyOS44MjE2IDIxLjYxMzkgMzAuMzI2MiAyMC45NjI5IDMwLjY3NzdDMjAuMzExOCAzMS4wMjI4IDE5LjU0MDQgMzEuMTk1MyAxOC42NDg0IDMxLjE5NTNaTTI3Ljc5OTIgMjQuNjMyOEwyNy45MzU5IDIxLjYzNDhMMjUuNDE2NCAyMy4yNjU2TDI0LjYzNTIgMjEuOTE4TDI3LjMxMDkgMjAuNTUwOEwyNC42MzUyIDE5LjE4MzZMMjUuNDE2NCAxNy44MTY0TDI3LjkzNTkgMTkuNDQ3M0wyNy43OTkyIDE2LjQ0OTJIMjkuMzQyMkwyOS4yMDU1IDE5LjQ0NzNMMzEuNzI1IDE3LjgxNjRMMzIuNTA2MyAxOS4xODM2TDI5LjgzMDUgMjAuNTUwOEwzMi41MDYzIDIxLjkxOEwzMS43MjUgMjMuMjY1NkwyOS4yMDU1IDIxLjYzNDhMMjkuMzQyMiAyNC42MzI4SDI3Ljc5OTJaIiBmaWxsPSIjRkFGQUZBIi8+Cjwvc3ZnPgo="
+      type="image/x-icon"
+    />
+    <title>Portfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #1c1d20;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .offline-container {
+        max-width: 500px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 18px;
+        opacity: 0.8;
+      }
+
+      .offline-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px 0;
+        border-radius: 10px;
+      }
+
+      .reload-btn {
+        margin-top: 20px;
+        background-color: #e63946;
+        color: #fff;
+        padding: 12px 24px;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: 0.3s;
+      }
+
+      .reload-btn:hover {
+        background-color: #d62839;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="offline-container">
+          <h1>You're Offline</h1>
+          <p>Check your internet connection and try again.</p>
+
+          <button class="reload-btn" onclick="location.reload()">
+            Try Again
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

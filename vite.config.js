@@ -3,16 +3,21 @@ import { glob } from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
+import dotenv from 'dotenv';
 
 export default defineConfig(({ command }) => {
   return {
     define: {
+      'process.env': process.env,
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
     build: {
       sourcemap: true,
       rollupOptions: {
+        input: {
+          main: 'offline.html',
+        },
         input: glob.sync('./src/*.html'),
         output: {
           manualChunks(id) {

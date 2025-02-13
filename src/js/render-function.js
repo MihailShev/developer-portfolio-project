@@ -1,3 +1,8 @@
+const getTime = () => {
+  const now = new Date();
+  return `${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
+};
+
 export const createModalWT = () => {
   const modalElWT = document.createElement('div');
   modalElWT.classList.add('modal-backdrop');
@@ -14,3 +19,44 @@ export const createModalWT = () => {
 
   return modalElWT;
 };
+
+// Requesr user
+export const requesr = text =>
+  `
+       <div class="message-user">
+          <b>You</b>
+
+          <p class="message-text">
+          ${text}
+          </p>
+
+          <tt class="time-user">${getTime()}</tt>
+        </div>
+`;
+
+// Answer AI
+export const answer = text =>
+  `
+       <div class="message-ai">
+          <b>AI</b>
+
+          <p class="message-text">
+          ${text}
+          </p>
+
+          <div class="inner-message-svg">
+            <button class="btn-copy" type="button">
+              <svg class="" width="17" height="17">
+                <use href="./img/icons/icons-chat.svg#icon-copy"></use>
+              </svg>
+            </button>
+
+            <button class="btn-speech" type="button">
+              <svg class="" width="17" height="17">
+                <use href="./img/icons/icons-chat.svg#icon-volume"></use>
+              </svg>
+            </button>
+
+          <tt class="time-ai">${getTime()}</tt>
+        </div>
+`;
