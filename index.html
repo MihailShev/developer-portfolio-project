@@ -23,22 +23,23 @@
       href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link
+    <!-- <link
       rel="preload"
       href="chrome-extension://cofdbpoegempjloogbagkncekinflcnj/build/content.css"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript
+    /> -->
+    <!-- <noscript
       ><link
         rel="stylesheet"
         href="chrome-extension://cofdbpoegempjloogbagkncekinflcnj/build/content.css"
-    /></noscript>
+    /></noscript> -->
 
     <script type="module" crossorigin src="/developer-portfolio-project/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/developer-portfolio-project/assets/render-function-DdwGxKGn.js">
     <link rel="modulepreload" crossorigin href="/developer-portfolio-project/assets/vendor-oEpPu-Yq.js">
     <link rel="stylesheet" crossorigin href="/developer-portfolio-project/assets/vendor-DHBATib1.css">
-    <link rel="stylesheet" crossorigin href="/developer-portfolio-project/assets/index-Xe6Z2EZA.css">
+    <link rel="stylesheet" crossorigin href="/developer-portfolio-project/assets/index-scE5ZE-3.css">
   </head>
   <body>
     <div class="modal-overlay is-closed">
@@ -72,7 +73,11 @@
           >
         </li>
         <li>
-          <a class="modal-menu-btn" href="" data-i18n="modalAI"
+          <a
+            class="modal-menu-btn"
+            target="_blank"
+            href="../chat-ai.html"
+            data-i18n="modalAI"
             >AI assistant
           </a>
         </li>
@@ -160,7 +165,7 @@
 </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" id="hero">
   <div class="hero-content container">
     <h1 class="title" data-i18n="heroTitle">
       HELLO.<br class="desktop-only" />
@@ -228,19 +233,25 @@
     name="menu-open"
     id="menu-open"
   />
+
   <label class="menu-open-button" for="menu-open">
     <span class="lines line-1"></span>
     <span class="lines line-2"></span>
     <span class="lines line-3"></span>
   </label>
+
   <a href="#" id="theme-toggle" class="menu-item" data-theme-toggle>
     <svg class="icon-menu" width="25" height="25">
-      <use href="/developer-portfolio-project/assets/icon-menu-aIGul2cN.svg#icon-moon-fill"></use></svg
-  ></a>
-  <a href="./communicat-IA.html" class="menu-item">
+      <use href="/developer-portfolio-project/assets/icon-menu-aIGul2cN.svg#icon-moon-fill"></use>
+    </svg>
+  </a>
+
+  <a href="../chat-ai.html" target="_blank" class="menu-item">
     <svg class="icon-menu" width="35" height="65">
-      <use href="/developer-portfolio-project/assets/icon-menu-aIGul2cN.svg#icon-file-ai"></use></svg
-  ></a>
+      <use href="/developer-portfolio-project/assets/icon-menu-aIGul2cN.svg#icon-file-ai"></use>
+    </svg>
+  </a>
+
   <a href="#" class="menu-item" data-lang="ua">
     <svg class="icon-menu" width="35" height="65">
       <use href="/developer-portfolio-project/assets/icon-menu-aIGul2cN.svg#icon-language"></use>
@@ -1111,6 +1122,14 @@
 
     <div class="loader-container-site">
   <div class="loader-site"></div>
+</div>
+
+    <div class="wrap-scroll-top">
+  <a class="scroll-top-link" href="#hero" title="go-top">
+    <svg class="" width="35" height="35">
+      <use href="/developer-portfolio-project/assets/icons-CCsaY-HF.svg#icon-arrow-up"></use>
+    </svg>
+  </a>
 </div>
 
   </body>
