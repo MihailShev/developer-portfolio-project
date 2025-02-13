@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat AI</title>
+    <link rel="icon" type="image/svg+xml" href="/developer-portfolio-project/favicon.svg" />
+    <!----- color-status-bar ----->
+    <meta name="theme-color" content="#ed3b44" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ed3b44" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- modern normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" crossorigin src="/developer-portfolio-project/chat-ai.js"></script>
+    <link rel="modulepreload" crossorigin href="/developer-portfolio-project/assets/render-function-DdwGxKGn.js">
+    <link rel="modulepreload" crossorigin href="/developer-portfolio-project/assets/vendor-oEpPu-Yq.js">
+    <link rel="stylesheet" crossorigin href="/developer-portfolio-project/assets/vendor-DHBATib1.css">
+    <link rel="stylesheet" crossorigin href="/developer-portfolio-project/assets/chat-ai-DwSQ0QVC.css">
+  </head>
+  <body>
+    <header class="chat-header">
+      <div class="container">
+        <nav class="chat-nav-header">
+          <ul class="chat-nav-header-list">
+            <li class="chat-nav-header-list-item">
+              <a class="go-back" href="./index.html">Back</a>
+            </li>
+
+            <li class="chat-nav-header-list-item">
+              <a class="scroll-authors" href="#Authors">Authors</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="chat-section">
+        <div class="container">
+          <div class="chat-container">
+            <div class="message-container">
+              <div class="loader-chat-wrap">
+                <div class="loader-chat"></div>
+              </div>
+            </div>
+            <form class="user-form">
+              <textarea
+                class="user-message-inp js-user-message-inp"
+                name="user-message"
+              ></textarea>
+
+              <div class="inner-form-svg">
+                <button class="user-talk-btn js-user-talt-btn" type="button">
+                  <svg class="icon-mic" width="15" height="15">
+                    <use href="/developer-portfolio-project/assets/icons-chat-CDQEBzEJ.svg#icon-mic"></use>
+                  </svg>
+                </button>
+
+                <button
+                  class="user-send-btn js-user-send-btn"
+                  type="submit"
+                  disabled
+                >
+                  <svg class="icon-send" width="15" height="15">
+                    <use href="/developer-portfolio-project/assets/icons-chat-CDQEBzEJ.svg#icon-send"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="chat-footer" id="Authors">
+      <div class="container">
+        <h2 class="chat-title">Ctrl-Alt-Elite</h2>
+
+        <ul class="chat-authors-list">
+          <li class="chat-authors-list-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="white"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 .296C5.373.296 0 5.67 0 12.296c0 5.298 3.438 9.793 8.207 11.387.6.11.82-.26.82-.577v-2.165c-3.338.725-4.042-1.61-4.042-1.61-.546-1.39-1.333-1.76-1.333-1.76-1.09-.745.083-.73.083-.73 1.204.084 1.838 1.236 1.838 1.236 1.07 1.832 2.807 1.303 3.492.996.108-.775.42-1.304.762-1.604-2.664-.303-5.467-1.33-5.467-5.922 0-1.31.468-2.38 1.235-3.22-.125-.303-.535-1.52.117-3.165 0 0 1.008-.322 3.3 1.23a11.55 11.55 0 0 1 3-.404c1.017.005 2.04.138 3 .404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.646.243 2.863.12 3.165.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.617-5.478 5.913.43.37.815 1.103.815 2.22v3.293c0 .32.216.693.825.575C20.565 22.084 24 17.59 24 12.296 24 5.67 18.627.296 12 .296Z"
+              />
+            </svg>
+            <a
+              class="chat-authors-list-item-link"
+              target="_blank"
+              href="https://github.com/MKsenia728"
+            >
+              Molchanova Oksana
+            </a>
+          </li>
+
+          <li class="chat-authors-list-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="white"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 .296C5.373.296 0 5.67 0 12.296c0 5.298 3.438 9.793 8.207 11.387.6.11.82-.26.82-.577v-2.165c-3.338.725-4.042-1.61-4.042-1.61-.546-1.39-1.333-1.76-1.333-1.76-1.09-.745.083-.73.083-.73 1.204.084 1.838 1.236 1.838 1.236 1.07 1.832 2.807 1.303 3.492.996.108-.775.42-1.304.762-1.604-2.664-.303-5.467-1.33-5.467-5.922 0-1.31.468-2.38 1.235-3.22-.125-.303-.535-1.52.117-3.165 0 0 1.008-.322 3.3 1.23a11.55 11.55 0 0 1 3-.404c1.017.005 2.04.138 3 .404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.646.243 2.863.12 3.165.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.617-5.478 5.913.43.37.815 1.103.815 2.22v3.293c0 .32.216.693.825.575C20.565 22.084 24 17.59 24 12.296 24 5.67 18.627.296 12 .296Z"
+              />
+            </svg>
+            <a
+              class="chat-authors-list-item-link"
+              target="_blank"
+              href="https://github.com/DimaHirchyk"
+            >
+              Girchuk Dmytro
+            </a>
+          </li>
+
+          <li class="chat-authors-list-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="white"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 .296C5.373.296 0 5.67 0 12.296c0 5.298 3.438 9.793 8.207 11.387.6.11.82-.26.82-.577v-2.165c-3.338.725-4.042-1.61-4.042-1.61-.546-1.39-1.333-1.76-1.333-1.76-1.09-.745.083-.73.083-.73 1.204.084 1.838 1.236 1.838 1.236 1.07 1.832 2.807 1.303 3.492.996.108-.775.42-1.304.762-1.604-2.664-.303-5.467-1.33-5.467-5.922 0-1.31.468-2.38 1.235-3.22-.125-.303-.535-1.52.117-3.165 0 0 1.008-.322 3.3 1.23a11.55 11.55 0 0 1 3-.404c1.017.005 2.04.138 3 .404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.646.243 2.863.12 3.165.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.617-5.478 5.913.43.37.815 1.103.815 2.22v3.293c0 .32.216.693.825.575C20.565 22.084 24 17.59 24 12.296 24 5.67 18.627.296 12 .296Z"
+              />
+            </svg>
+            <a
+              class="chat-authors-list-item-link"
+              target="_blank"
+              href="https://github.com/Art-Rud"
+            >
+              Dzyubenko Maxim
+            </a>
+          </li>
+
+          <li class="chat-authors-list-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="white"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 .296C5.373.296 0 5.67 0 12.296c0 5.298 3.438 9.793 8.207 11.387.6.11.82-.26.82-.577v-2.165c-3.338.725-4.042-1.61-4.042-1.61-.546-1.39-1.333-1.76-1.333-1.76-1.09-.745.083-.73.083-.73 1.204.084 1.838 1.236 1.838 1.236 1.07 1.832 2.807 1.303 3.492.996.108-.775.42-1.304.762-1.604-2.664-.303-5.467-1.33-5.467-5.922 0-1.31.468-2.38 1.235-3.22-.125-.303-.535-1.52.117-3.165 0 0 1.008-.322 3.3 1.23a11.55 11.55 0 0 1 3-.404c1.017.005 2.04.138 3 .404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.646.243 2.863.12 3.165.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.617-5.478 5.913.43.37.815 1.103.815 2.22v3.293c0 .32.216.693.825.575C20.565 22.084 24 17.59 24 12.296 24 5.67 18.627.296 12 .296Z"
+              />
+            </svg>
+            <a
+              class="chat-authors-list-item-link"
+              target="_blank"
+              href="https://github.com/SilverCondor18"
+            >
+              Zaidenshnir Vitaly
+            </a>
+          </li>
+
+          <li class="chat-authors-list-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="white"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 .296C5.373.296 0 5.67 0 12.296c0 5.298 3.438 9.793 8.207 11.387.6.11.82-.26.82-.577v-2.165c-3.338.725-4.042-1.61-4.042-1.61-.546-1.39-1.333-1.76-1.333-1.76-1.09-.745.083-.73.083-.73 1.204.084 1.838 1.236 1.838 1.236 1.07 1.832 2.807 1.303 3.492.996.108-.775.42-1.304.762-1.604-2.664-.303-5.467-1.33-5.467-5.922 0-1.31.468-2.38 1.235-3.22-.125-.303-.535-1.52.117-3.165 0 0 1.008-.322 3.3 1.23a11.55 11.55 0 0 1 3-.404c1.017.005 2.04.138 3 .404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.646.243 2.863.12 3.165.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.617-5.478 5.913.43.37.815 1.103.815 2.22v3.293c0 .32.216.693.825.575C20.565 22.084 24 17.59 24 12.296 24 5.67 18.627.296 12 .296Z"
+              />
+            </svg>
+            <a
+              class="chat-authors-list-item-link"
+              target="_blank"
+              href="https://github.com/MykytaKononov"
+            >
+              Mironova Galina
+            </a>
+          </li>
+
+          <li class="chat-authors-list-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="white"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 .296C5.373.296 0 5.67 0 12.296c0 5.298 3.438 9.793 8.207 11.387.6.11.82-.26.82-.577v-2.165c-3.338.725-4.042-1.61-4.042-1.61-.546-1.39-1.333-1.76-1.333-1.76-1.09-.745.083-.73.083-.73 1.204.084 1.838 1.236 1.838 1.236 1.07 1.832 2.807 1.303 3.492.996.108-.775.42-1.304.762-1.604-2.664-.303-5.467-1.33-5.467-5.922 0-1.31.468-2.38 1.235-3.22-.125-.303-.535-1.52.117-3.165 0 0 1.008-.322 3.3 1.23a11.55 11.55 0 0 1 3-.404c1.017.005 2.04.138 3 .404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.646.243 2.863.12 3.165.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.617-5.478 5.913.43.37.815 1.103.815 2.22v3.293c0 .32.216.693.825.575C20.565 22.084 24 17.59 24 12.296 24 5.67 18.627.296 12 .296Z"
+              />
+            </svg>
+            <a
+              class="chat-authors-list-item-link"
+              target="_blank"
+              href="https://github.com/Inna-Martunyuk"
+            >
+              Rud Artem
+            </a>
+          </li>
+
+          <li class="chat-authors-list-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="white"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 .296C5.373.296 0 5.67 0 12.296c0 5.298 3.438 9.793 8.207 11.387.6.11.82-.26.82-.577v-2.165c-3.338.725-4.042-1.61-4.042-1.61-.546-1.39-1.333-1.76-1.333-1.76-1.09-.745.083-.73.083-.73 1.204.084 1.838 1.236 1.838 1.236 1.07 1.832 2.807 1.303 3.492.996.108-.775.42-1.304.762-1.604-2.664-.303-5.467-1.33-5.467-5.922 0-1.31.468-2.38 1.235-3.22-.125-.303-.535-1.52.117-3.165 0 0 1.008-.322 3.3 1.23a11.55 11.55 0 0 1 3-.404c1.017.005 2.04.138 3 .404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.646.243 2.863.12 3.165.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.617-5.478 5.913.43.37.815 1.103.815 2.22v3.293c0 .32.216.693.825.575C20.565 22.084 24 17.59 24 12.296 24 5.67 18.627.296 12 .296Z"
+              />
+            </svg>
+            <a
+              class="chat-authors-list-item-link"
+              target="_blank"
+              href="https://github.com/Halyna1900"
+            >
+              Kononov Mikita
+            </a>
+          </li>
+
+          <li class="chat-authors-list-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="white"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 .296C5.373.296 0 5.67 0 12.296c0 5.298 3.438 9.793 8.207 11.387.6.11.82-.26.82-.577v-2.165c-3.338.725-4.042-1.61-4.042-1.61-.546-1.39-1.333-1.76-1.333-1.76-1.09-.745.083-.73.083-.73 1.204.084 1.838 1.236 1.838 1.236 1.07 1.832 2.807 1.303 3.492.996.108-.775.42-1.304.762-1.604-2.664-.303-5.467-1.33-5.467-5.922 0-1.31.468-2.38 1.235-3.22-.125-.303-.535-1.52.117-3.165 0 0 1.008-.322 3.3 1.23a11.55 11.55 0 0 1 3-.404c1.017.005 2.04.138 3 .404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.646.243 2.863.12 3.165.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.617-5.478 5.913.43.37.815 1.103.815 2.22v3.293c0 .32.216.693.825.575C20.565 22.084 24 17.59 24 12.296 24 5.67 18.627.296 12 .296Z"
+              />
+            </svg>
+            <a
+              class="chat-authors-list-item-link"
+              target="_blank"
+              href="https://github.com/VitaliiZ1993"
+            >
+              Gurulov Nikita
+            </a>
+          </li>
+
+          <li class="chat-authors-list-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="white"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 .296C5.373.296 0 5.67 0 12.296c0 5.298 3.438 9.793 8.207 11.387.6.11.82-.26.82-.577v-2.165c-3.338.725-4.042-1.61-4.042-1.61-.546-1.39-1.333-1.76-1.333-1.76-1.09-.745.083-.73.083-.73 1.204.084 1.838 1.236 1.838 1.236 1.07 1.832 2.807 1.303 3.492.996.108-.775.42-1.304.762-1.604-2.664-.303-5.467-1.33-5.467-5.922 0-1.31.468-2.38 1.235-3.22-.125-.303-.535-1.52.117-3.165 0 0 1.008-.322 3.3 1.23a11.55 11.55 0 0 1 3-.404c1.017.005 2.04.138 3 .404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.646.243 2.863.12 3.165.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.617-5.478 5.913.43.37.815 1.103.815 2.22v3.293c0 .32.216.693.825.575C20.565 22.084 24 17.59 24 12.296 24 5.67 18.627.296 12 .296Z"
+              />
+            </svg>
+            <a
+              class="chat-authors-list-item-link"
+              target="_blank"
+              href="https://github.com/volodymyr-borysov808"
+            >
+              Borisov Volodymyr
+            </a>
+          </li>
+
+          <li class="chat-authors-list-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="white"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 .296C5.373.296 0 5.67 0 12.296c0 5.298 3.438 9.793 8.207 11.387.6.11.82-.26.82-.577v-2.165c-3.338.725-4.042-1.61-4.042-1.61-.546-1.39-1.333-1.76-1.333-1.76-1.09-.745.083-.73.083-.73 1.204.084 1.838 1.236 1.838 1.236 1.07 1.832 2.807 1.303 3.492.996.108-.775.42-1.304.762-1.604-2.664-.303-5.467-1.33-5.467-5.922 0-1.31.468-2.38 1.235-3.22-.125-.303-.535-1.52.117-3.165 0 0 1.008-.322 3.3 1.23a11.55 11.55 0 0 1 3-.404c1.017.005 2.04.138 3 .404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.646.243 2.863.12 3.165.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.617-5.478 5.913.43.37.815 1.103.815 2.22v3.293c0 .32.216.693.825.575C20.565 22.084 24 17.59 24 12.296 24 5.67 18.627.296 12 .296Z"
+              />
+            </svg>
+            <a
+              class="chat-authors-list-item-link"
+              target="_blank"
+              href="https://github.com/Nik-gurulov528"
+            >
+              Martinyuk Inna
+            </a>
+          </li>
+
+          <li class="chat-authors-list-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="white"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 .296C5.373.296 0 5.67 0 12.296c0 5.298 3.438 9.793 8.207 11.387.6.11.82-.26.82-.577v-2.165c-3.338.725-4.042-1.61-4.042-1.61-.546-1.39-1.333-1.76-1.333-1.76-1.09-.745.083-.73.083-.73 1.204.084 1.838 1.236 1.838 1.236 1.07 1.832 2.807 1.303 3.492.996.108-.775.42-1.304.762-1.604-2.664-.303-5.467-1.33-5.467-5.922 0-1.31.468-2.38 1.235-3.22-.125-.303-.535-1.52.117-3.165 0 0 1.008-.322 3.3 1.23a11.55 11.55 0 0 1 3-.404c1.017.005 2.04.138 3 .404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.646.243 2.863.12 3.165.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.617-5.478 5.913.43.37.815 1.103.815 2.22v3.293c0 .32.216.693.825.575C20.565 22.084 24 17.59 24 12.296 24 5.67 18.627.296 12 .296Z"
+              />
+            </svg>
+            <a
+              class="chat-authors-list-item-link"
+              target="_blank"
+              href="https://github.com/MihailShev"
+            >
+              Shevchenko Myhailo
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div class="loader-container-site">
+      <div class="loader-site"></div>
+    </div>
+  </body>
+</html>
