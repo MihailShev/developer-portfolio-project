@@ -8,7 +8,7 @@ const enableDarkStyle = () => {
 
   themeToggles.forEach(toggle => {
     const iconUse = toggle.querySelector('use');
-    iconUse.setAttribute('href', './img/icons/icon-menu.svg#icon-moon-fill');
+    iconUse.setAttribute('href', '../img/icons/icon-menu.svg#icon-moon-fill');
   });
 };
 
@@ -18,7 +18,7 @@ const disableDarkStyle = () => {
 
   themeToggles.forEach(toggle => {
     const iconUse = toggle.querySelector('use');
-    iconUse.setAttribute('href', './img/icons/icon-menu.svg#icon-sun');
+    iconUse.setAttribute('href', '../img/icons/icon-menu.svg#icon-sun');
   });
 };
 
